@@ -1,0 +1,114 @@
+{
+  "exports": [
+    {
+      "case": "release-tradient-smoke",
+      "composition": "TradientRulesHandoff",
+      "range": [
+        430,
+        459
+      ],
+      "dimensions": {
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "durationInFrames": 2446
+      },
+      "export": {
+        "file": "TradientRulesHandoff.mp4",
+        "frames": 30,
+        "sha256": "7474c172026e3b92d624f9ad619f708cf3e9cfaa41d5c01d03cb2a6dccfef840",
+        "fullDecode": true,
+        "audioAsset": "craft-master-v6.wav"
+      },
+      "environment": {
+        "browserSha256": "a6516527d27e69244beafc04f347fc90ef363c23598b951ae05fc96c999b7f54",
+        "node": "v25.2.1",
+        "platform": "darwin",
+        "architecture": "arm64"
+      }
+    },
+    {
+      "case": "release-reference-smoke",
+      "composition": "ProductionScriptReplay",
+      "range": [
+        240,
+        245
+      ],
+      "dimensions": {
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "durationInFrames": 4865
+      },
+      "export": {
+        "file": "ProductionScriptReplay.mp4",
+        "frames": 6,
+        "sha256": "da3703f0cfbcbc72084e2a3a9f9f32e3faaf6561860af4adab43c73251c8cd24",
+        "fullDecode": true,
+        "audioAsset": "reference-audio.wav"
+      },
+      "environment": {
+        "browserSha256": "a6516527d27e69244beafc04f347fc90ef363c23598b951ae05fc96c999b7f54",
+        "node": "v25.2.1",
+        "platform": "darwin",
+        "architecture": "arm64"
+      }
+    },
+    {
+      "case": "release-ship-native-smoke",
+      "composition": "Demo-ship",
+      "range": [
+        0,
+        5
+      ],
+      "dimensions": {
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "durationInFrames": 180
+      },
+      "export": {
+        "file": "Demo-ship.mp4",
+        "frames": 6,
+        "sha256": "0d318d92289764b23750ab45d42913ea9e12af97410c71831d5eafdfe802105f",
+        "fullDecode": true,
+        "audioAsset": null
+      },
+      "environment": {
+        "browserSha256": "a6516527d27e69244beafc04f347fc90ef363c23598b951ae05fc96c999b7f54",
+        "node": "v25.2.1",
+        "platform": "darwin",
+        "architecture": "arm64"
+      }
+    },
+    {
+      "case": "release-cstack-smoke",
+      "composition": "ReferenceClone",
+      "range": [
+        0,
+        5
+      ],
+      "dimensions": {
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "durationInFrames": 4865
+      },
+      "export": {
+        "file": "ReferenceClone.mp4",
+        "frames": 6,
+        "sha256": "3add9bc12d906a6c19920806f870c3826a033d3c338a7665a414dc72ce10f6fa",
+        "fullDecode": true,
+        "audioAsset": "reference-audio.wav"
+      },
+      "environment": {
+        "browserSha256": "a6516527d27e69244beafc04f347fc90ef363c23598b951ae05fc96c999b7f54",
+        "node": "v25.2.1",
+        "platform": "darwin",
+        "architecture": "arm64"
+      }
+    }
+  ],
+  "excluded": "Full-film public-package rerenders; cross-platform testing",
+  "correction": "Legacy ship software-profile attempt was interrupted as too slow; native original profile then exported successfully. Failed attempt preserved locally."
+}

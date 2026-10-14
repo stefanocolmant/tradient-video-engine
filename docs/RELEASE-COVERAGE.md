@@ -10,10 +10,10 @@ This release packages the latest Tradient V8 example, A23 component/replay libra
 - A23's39-shot/4865-frame coverage and public asset hashes.
 - Root new-film scaffold and real Remotion Studio preview.
 - V8 portable export:30 frames430–459, full MP4 decode, and30/30 decoded lossless frames exactly equal to the frozen V8 family render on this machine.
-- Separate short reference, ship and CStack exports are recorded in `verification/exports.json` when complete.
+- Separate short reference, ship and CStack exports completed and fully decoded; receipts are in `verification/exports.json`.
 - Curated publication scan found no credential patterns or private workstation paths. Exact scope is in `verification/publication-scan.json`.
 
-Fresh GitHub clone verification is recorded separately in `verification/clone-check.json` after publication. Do not infer completion of that check from this document alone.
+Fresh GitHub HTTPS clone, installation, checks and a six-frame V8 export all passed. The clone was in an independent path containing spaces. Its six lossless frames exactly match the working-package sample. See `verification/clone-check.json` for the tested commit and explicit exclusions.
 
 ## Explicitly not covered
 
