@@ -1,0 +1,127 @@
+{
+  "scope": "Portable package V8 smoke vs frozen local V8 family",
+  "frames": 30,
+  "pixelExact": 30,
+  "rows": [
+    {
+      "frame": 430,
+      "pixelExact": true
+    },
+    {
+      "frame": 431,
+      "pixelExact": true
+    },
+    {
+      "frame": 432,
+      "pixelExact": true
+    },
+    {
+      "frame": 433,
+      "pixelExact": true
+    },
+    {
+      "frame": 434,
+      "pixelExact": true
+    },
+    {
+      "frame": 435,
+      "pixelExact": true
+    },
+    {
+      "frame": 436,
+      "pixelExact": true
+    },
+    {
+      "frame": 437,
+      "pixelExact": true
+    },
+    {
+      "frame": 438,
+      "pixelExact": true
+    },
+    {
+      "frame": 439,
+      "pixelExact": true
+    },
+    {
+      "frame": 440,
+      "pixelExact": true
+    },
+    {
+      "frame": 441,
+      "pixelExact": true
+    },
+    {
+      "frame": 442,
+      "pixelExact": true
+    },
+    {
+      "frame": 443,
+      "pixelExact": true
+    },
+    {
+      "frame": 444,
+      "pixelExact": true
+    },
+    {
+      "frame": 445,
+      "pixelExact": true
+    },
+    {
+      "frame": 446,
+      "pixelExact": true
+    },
+    {
+      "frame": 447,
+      "pixelExact": true
+    },
+    {
+      "frame": 448,
+      "pixelExact": true
+    },
+    {
+      "frame": 449,
+      "pixelExact": true
+    },
+    {
+      "frame": 450,
+      "pixelExact": true
+    },
+    {
+      "frame": 451,
+      "pixelExact": true
+    },
+    {
+      "frame": 452,
+      "pixelExact": true
+    },
+    {
+      "frame": 453,
+      "pixelExact": true
+    },
+    {
+      "frame": 454,
+      "pixelExact": true
+    },
+    {
+      "frame": 455,
+      "pixelExact": true
+    },
+    {
+      "frame": 456,
+      "pixelExact": true
+    },
+    {
+      "frame": 457,
+      "pixelExact": true
+    },
+    {
+      "frame": 458,
+      "pixelExact": true
+    },
+    {
+      "frame": 459,
+      "pixelExact": true
+    }
+  ]
+}

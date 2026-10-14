@@ -1,0 +1,4 @@
+CStack by Charles Zheng, MIT. https://github.com/goodnight000/cstack
+Pinned d29d58ac4a4aa61b92a3554dd9d783cdcd2557b1
+Copied original globe, phone, cable-web, frame synchronization, finish and audio helpers. NASA Earth textures: public domain; credit NASA.
+The original full film scene source is not published; custom reconstruction scenes are separate.

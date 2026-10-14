@@ -1,0 +1,29 @@
+{
+  "cableConstruction": {
+    "eventMutationMovesFivePhases": true,
+    "missingBindingsRejected": true,
+    "requiredInputRejected": true,
+    "wrongEndpointRejected": true,
+    "singlePulseHandoff": true,
+    "routeAnchorInMacro": true
+  },
+  "limitJourney": {
+    "boundToSpokenAnchor": true,
+    "missingRecipeRejected": true,
+    "neighborStateInactive": true,
+    "priceAboveFixedLimit": true
+  },
+  "stateFrames": 2446,
+  "backwardFrames": 2446,
+  "tileHandoffChecks": 144,
+  "wordCue": {
+    "passes": 1021,
+    "previousFrameFalse": true,
+    "anchorTrue": true
+  },
+  "scriptMutationMovesCue": true,
+  "reportCameraDistanceBounded": true,
+  "invalidInputsRejected": 7,
+  "secondRecords": 82,
+  "scope": "State, script-controlled motion and event relationships; not an aesthetic score or proof of GPU seek parity."
+}

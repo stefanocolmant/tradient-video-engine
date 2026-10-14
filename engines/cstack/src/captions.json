@@ -1,0 +1,772 @@
+[
+  {
+    "start": 0.0,
+    "end": 1.5,
+    "text": "Right now 4,000 meters"
+  },
+  {
+    "start": 1.5,
+    "end": 2.6,
+    "text": "below the Pacific Ocean,"
+  },
+  {
+    "start": 2.6,
+    "end": 3.3,
+    "text": "a beam of light"
+  },
+  {
+    "start": 3.3,
+    "end": 3.7,
+    "text": "is traveling"
+  },
+  {
+    "start": 3.7,
+    "end": 4.6,
+    "text": "towards Los Angeles"
+  },
+  {
+    "start": 4.6,
+    "end": 6.3,
+    "text": "at 200,000 kilometers"
+  },
+  {
+    "start": 6.3,
+    "end": 7.0,
+    "text": "per second."
+  },
+  {
+    "start": 7.0,
+    "end": 7.8,
+    "text": "It is carrying a photo"
+  },
+  {
+    "start": 7.8,
+    "end": 9.3,
+    "text": "that your mom just sent."
+  },
+  {
+    "start": 9.3,
+    "end": 10.0,
+    "text": "From the moment"
+  },
+  {
+    "start": 10.0,
+    "end": 10.7,
+    "text": "your mom's thumb"
+  },
+  {
+    "start": 10.7,
+    "end": 11.4,
+    "text": "hit the send"
+  },
+  {
+    "start": 11.4,
+    "end": 11.8,
+    "text": "to the moment"
+  },
+  {
+    "start": 11.8,
+    "end": 13.0,
+    "text": "that your phone lights up,"
+  },
+  {
+    "start": 13.0,
+    "end": 15.0,
+    "text": "only 200 milliseconds passes."
+  },
+  {
+    "start": 15.0,
+    "end": 16.1,
+    "text": "Now let's slow down"
+  },
+  {
+    "start": 16.1,
+    "end": 17.3,
+    "text": "that 200 milliseconds"
+  },
+  {
+    "start": 17.3,
+    "end": 18.4,
+    "text": "750 times"
+  },
+  {
+    "start": 18.4,
+    "end": 19.3,
+    "text": "so we can see everything"
+  },
+  {
+    "start": 19.3,
+    "end": 20.6,
+    "text": "that happens to the photo."
+  },
+  {
+    "start": 20.6,
+    "end": 21.8,
+    "text": "At 0 milliseconds,"
+  },
+  {
+    "start": 21.8,
+    "end": 22.9,
+    "text": "the phone doesn't recognize"
+  },
+  {
+    "start": 22.9,
+    "end": 23.6,
+    "text": "the photo."
+  },
+  {
+    "start": 23.6,
+    "end": 24.3,
+    "text": "It only knows"
+  },
+  {
+    "start": 24.3,
+    "end": 25.6,
+    "text": "ones and zeros."
+  },
+  {
+    "start": 25.6,
+    "end": 26.9,
+    "text": "The phone converts the photo"
+  },
+  {
+    "start": 26.9,
+    "end": 28.0,
+    "text": "into 16 million"
+  },
+  {
+    "start": 28.0,
+    "end": 28.8,
+    "text": "ones and zeros"
+  },
+  {
+    "start": 28.8,
+    "end": 30.0,
+    "text": "and encrypts its data."
+  },
+  {
+    "start": 30.0,
+    "end": 31.1,
+    "text": "To anyone that tries"
+  },
+  {
+    "start": 31.1,
+    "end": 32.4,
+    "text": "to intercept this data,"
+  },
+  {
+    "start": 32.4,
+    "end": 32.9,
+    "text": "all they see"
+  },
+  {
+    "start": 33.0,
+    "end": 34.0,
+    "text": "is random numbers."
+  },
+  {
+    "start": 34.0,
+    "end": 35.4,
+    "text": "But this data is too big"
+  },
+  {
+    "start": 35.4,
+    "end": 36.5,
+    "text": "to be sent in one go"
+  },
+  {
+    "start": 36.5,
+    "end": 37.2,
+    "text": "so it is split"
+  },
+  {
+    "start": 37.2,
+    "end": 39.5,
+    "text": "into 1,500 smaller packets"
+  },
+  {
+    "start": 39.5,
+    "end": 40.1,
+    "text": "each labeled"
+  },
+  {
+    "start": 40.1,
+    "end": 40.7,
+    "text": "with the address"
+  },
+  {
+    "start": 40.7,
+    "end": 41.9,
+    "text": "and the packet's number."
+  },
+  {
+    "start": 41.9,
+    "end": 42.4,
+    "text": "Remember those"
+  },
+  {
+    "start": 42.4,
+    "end": 43.1,
+    "text": "packet numbers,"
+  },
+  {
+    "start": 43.1,
+    "end": 43.6,
+    "text": "because your phone"
+  },
+  {
+    "start": 43.6,
+    "end": 44.2,
+    "text": "is going to need them"
+  },
+  {
+    "start": 44.2,
+    "end": 44.967,
+    "text": "at the end."
+  },
+  {
+    "start": 45.167,
+    "end": 46.4,
+    "text": "At 3 milliseconds,"
+  },
+  {
+    "start": 46.4,
+    "end": 47.2,
+    "text": "the packet leaves"
+  },
+  {
+    "start": 47.2,
+    "end": 47.8,
+    "text": "your mom's phone"
+  },
+  {
+    "start": 47.8,
+    "end": 48.8,
+    "text": "as radio waves"
+  },
+  {
+    "start": 48.8,
+    "end": 49.7,
+    "text": "traveling through the air"
+  },
+  {
+    "start": 49.7,
+    "end": 50.7,
+    "text": "into a cell tower"
+  },
+  {
+    "start": 50.7,
+    "end": 52.2,
+    "text": "a few hundred meters away."
+  },
+  {
+    "start": 52.2,
+    "end": 53.1,
+    "text": "The tower converts"
+  },
+  {
+    "start": 53.1,
+    "end": 54.4,
+    "text": "radio waves into light"
+  },
+  {
+    "start": 54.4,
+    "end": 55.5,
+    "text": "and sends that light"
+  },
+  {
+    "start": 55.5,
+    "end": 57.1,
+    "text": "into a fiber optic cable."
+  },
+  {
+    "start": 57.1,
+    "end": 57.7,
+    "text": "This next part"
+  },
+  {
+    "start": 57.7,
+    "end": 59.5,
+    "text": "is the most impressive part."
+  },
+  {
+    "start": 59.5,
+    "end": 60.4,
+    "text": "No machine knows"
+  },
+  {
+    "start": 60.4,
+    "end": 61.2,
+    "text": "the complete path"
+  },
+  {
+    "start": 61.2,
+    "end": 62.2,
+    "text": "that the packet will take."
+  },
+  {
+    "start": 62.2,
+    "end": 62.9,
+    "text": "The packet moves"
+  },
+  {
+    "start": 62.9,
+    "end": 64.1,
+    "text": "through a chain of routers"
+  },
+  {
+    "start": 64.1,
+    "end": 64.8,
+    "text": "and each router"
+  },
+  {
+    "start": 64.8,
+    "end": 66.2,
+    "text": "does only one thing,"
+  },
+  {
+    "start": 66.2,
+    "end": 67.3,
+    "text": "which is to read the address"
+  },
+  {
+    "start": 67.3,
+    "end": 68.0,
+    "text": "on a packet"
+  },
+  {
+    "start": 68.0,
+    "end": 69.2,
+    "text": "and pass that packet on"
+  },
+  {
+    "start": 69.2,
+    "end": 70.2,
+    "text": "to a nearby router"
+  },
+  {
+    "start": 70.2,
+    "end": 71.0,
+    "text": "that is closer"
+  },
+  {
+    "start": 71.0,
+    "end": 72.4,
+    "text": "to the destination."
+  },
+  {
+    "start": 72.4,
+    "end": 73.7,
+    "text": "If one connection is broken"
+  },
+  {
+    "start": 73.7,
+    "end": 74.8,
+    "text": "the router sends the packet"
+  },
+  {
+    "start": 74.8,
+    "end": 76.2,
+    "text": "through a different connection."
+  },
+  {
+    "start": 76.2,
+    "end": 77.5,
+    "text": "At 20 milliseconds,"
+  },
+  {
+    "start": 77.5,
+    "end": 78.8,
+    "text": "the light enters a cable"
+  },
+  {
+    "start": 78.8,
+    "end": 79.8,
+    "text": "that runs along the bottom"
+  },
+  {
+    "start": 79.8,
+    "end": 81.0,
+    "text": "of the Pacific."
+  },
+  {
+    "start": 81.0,
+    "end": 82.2,
+    "text": "That cable is only"
+  },
+  {
+    "start": 82.2,
+    "end": 83.0,
+    "text": "about as thick"
+  },
+  {
+    "start": 83.0,
+    "end": 84.0,
+    "text": "as a garden hose"
+  },
+  {
+    "start": 84.0,
+    "end": 84.9,
+    "text": "and the glass fiber"
+  },
+  {
+    "start": 84.9,
+    "end": 85.7,
+    "text": "inside the cable"
+  },
+  {
+    "start": 85.7,
+    "end": 87.4,
+    "text": "is as thin as a human hair."
+  },
+  {
+    "start": 87.4,
+    "end": 89.1,
+    "text": "About 600 cables like this"
+  },
+  {
+    "start": 89.1,
+    "end": 90.3,
+    "text": "carry 99%"
+  },
+  {
+    "start": 90.3,
+    "end": 90.9,
+    "text": "of all the data"
+  },
+  {
+    "start": 90.9,
+    "end": 91.6,
+    "text": "that travels"
+  },
+  {
+    "start": 91.6,
+    "end": 92.8,
+    "text": "between continents."
+  },
+  {
+    "start": 92.8,
+    "end": 93.5,
+    "text": "Most people assume"
+  },
+  {
+    "start": 93.5,
+    "end": 94.1,
+    "text": "that satellites"
+  },
+  {
+    "start": 94.1,
+    "end": 94.9,
+    "text": "carry this data"
+  },
+  {
+    "start": 94.9,
+    "end": 96.5,
+    "text": "but the cables actually do."
+  },
+  {
+    "start": 96.5,
+    "end": 97.3,
+    "text": "Light fades"
+  },
+  {
+    "start": 97.3,
+    "end": 97.9,
+    "text": "as it travels"
+  },
+  {
+    "start": 97.9,
+    "end": 98.5,
+    "text": "through the glass"
+  },
+  {
+    "start": 98.5,
+    "end": 100.2,
+    "text": "so every few dozen kilometers"
+  },
+  {
+    "start": 100.2,
+    "end": 101.3,
+    "text": "a device called a repeater"
+  },
+  {
+    "start": 101.3,
+    "end": 103.6,
+    "text": "makes the light strong again."
+  },
+  {
+    "start": 103.6,
+    "end": 104.4,
+    "text": "With that help"
+  },
+  {
+    "start": 104.4,
+    "end": 105.6,
+    "text": "the light travels across"
+  },
+  {
+    "start": 105.6,
+    "end": 107.0,
+    "text": "12,000 kilometers"
+  },
+  {
+    "start": 107.0,
+    "end": 108.1,
+    "text": "of dark ocean floor"
+  },
+  {
+    "start": 108.1,
+    "end": 110.2,
+    "text": "in only 60 milliseconds."
+  },
+  {
+    "start": 110.2,
+    "end": 111.7,
+    "text": "At 150 milliseconds"
+  },
+  {
+    "start": 111.7,
+    "end": 112.5,
+    "text": "the light reaches"
+  },
+  {
+    "start": 112.5,
+    "end": 113.3,
+    "text": "Los Angeles,"
+  },
+  {
+    "start": 113.3,
+    "end": 114.3,
+    "text": "where it converts back"
+  },
+  {
+    "start": 114.3,
+    "end": 115.1,
+    "text": "into radio waves"
+  },
+  {
+    "start": 115.1,
+    "end": 116.2,
+    "text": "that travel through the air"
+  },
+  {
+    "start": 116.2,
+    "end": 117.0,
+    "text": "to your phone."
+  },
+  {
+    "start": 117.0,
+    "end": 117.7,
+    "text": "The packets arrive"
+  },
+  {
+    "start": 117.7,
+    "end": 118.4,
+    "text": "in the wrong order"
+  },
+  {
+    "start": 118.4,
+    "end": 119.5,
+    "text": "and three packets were lost"
+  },
+  {
+    "start": 119.5,
+    "end": 120.2,
+    "text": "during the trip."
+  },
+  {
+    "start": 120.2,
+    "end": 120.7,
+    "text": "This is where"
+  },
+  {
+    "start": 120.7,
+    "end": 122.2,
+    "text": "the packet numbers matter."
+  },
+  {
+    "start": 122.2,
+    "end": 123.5,
+    "text": "Your phone uses the number"
+  },
+  {
+    "start": 123.5,
+    "end": 124.4,
+    "text": "to put the packets"
+  },
+  {
+    "start": 124.4,
+    "end": 125.2,
+    "text": "back into order,"
+  },
+  {
+    "start": 125.2,
+    "end": 126.2,
+    "text": "which shows your phone"
+  },
+  {
+    "start": 126.2,
+    "end": 127.4,
+    "text": "exactly which three packets"
+  },
+  {
+    "start": 127.4,
+    "end": 127.9,
+    "text": "are missing,"
+  },
+  {
+    "start": 127.9,
+    "end": 128.8,
+    "text": "and your phone asks"
+  },
+  {
+    "start": 128.8,
+    "end": 129.5,
+    "text": "your mom's phone"
+  },
+  {
+    "start": 129.5,
+    "end": 130.9,
+    "text": "to send those three again."
+  },
+  {
+    "start": 130.9,
+    "end": 132.7,
+    "text": "Once all 1,500 packets arrive,"
+  },
+  {
+    "start": 132.7,
+    "end": 133.6,
+    "text": "your phone decrypts them"
+  },
+  {
+    "start": 133.6,
+    "end": 134.5,
+    "text": "and puts the photo"
+  },
+  {
+    "start": 134.5,
+    "end": 135.4,
+    "text": "back together."
+  },
+  {
+    "start": 135.4,
+    "end": 136.4,
+    "text": "Your screen lights up"
+  },
+  {
+    "start": 136.4,
+    "end": 137.5,
+    "text": "200 milliseconds"
+  },
+  {
+    "start": 137.5,
+    "end": 139.2,
+    "text": "after your mom pressed send."
+  },
+  {
+    "start": 139.2,
+    "end": 140.3,
+    "text": "In 1858"
+  },
+  {
+    "start": 140.3,
+    "end": 142.2,
+    "text": "the first telegraph cable"
+  },
+  {
+    "start": 142.2,
+    "end": 143.5,
+    "text": "took 16 hours"
+  },
+  {
+    "start": 143.5,
+    "end": 144.2,
+    "text": "to send a message"
+  },
+  {
+    "start": 144.2,
+    "end": 145.8,
+    "text": "of 98 words."
+  },
+  {
+    "start": 145.8,
+    "end": 146.5,
+    "text": "Today a photo"
+  },
+  {
+    "start": 146.5,
+    "end": 147.5,
+    "text": "crosses the Pacific"
+  },
+  {
+    "start": 147.5,
+    "end": 149.3,
+    "text": "in 0.2 seconds."
+  },
+  {
+    "start": 149.3,
+    "end": 150.8,
+    "text": "No country owns the internet"
+  },
+  {
+    "start": 150.8,
+    "end": 151.6,
+    "text": "and no company"
+  },
+  {
+    "start": 151.6,
+    "end": 152.5,
+    "text": "owns it either."
+  },
+  {
+    "start": 152.5,
+    "end": 153.2,
+    "text": "The internet is"
+  },
+  {
+    "start": 153.2,
+    "end": 154.2,
+    "text": "billions of machines"
+  },
+  {
+    "start": 154.2,
+    "end": 155.6,
+    "text": "whose owners have never met"
+  },
+  {
+    "start": 155.6,
+    "end": 156.0,
+    "text": "and every one"
+  },
+  {
+    "start": 156.0,
+    "end": 156.7,
+    "text": "of those machines"
+  },
+  {
+    "start": 156.7,
+    "end": 158.2,
+    "text": "follows the exact same agreement:"
+  },
+  {
+    "start": 158.2,
+    "end": 158.9,
+    "text": "when a stranger's"
+  },
+  {
+    "start": 158.9,
+    "end": 159.8,
+    "text": "packets arrive,"
+  },
+  {
+    "start": 159.8,
+    "end": 160.2,
+    "text": "pass it on"
+  },
+  {
+    "start": 160.2,
+    "end": 161.7,
+    "text": "to the next machine."
+  }
+]

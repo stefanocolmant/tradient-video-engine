@@ -1,0 +1,8 @@
+{
+  "filesInspected": 313,
+  "credentialAndPrivatePathFindings": [],
+  "largestFileBytes": 31308858,
+  "originalReferenceMedia": "excluded; placeholders and open-font replacement verified",
+  "gitHistory": "new snapshot; no source repository history",
+  "note": "Pattern/file-scope inspection; does not claim a universal secret detector"
+}

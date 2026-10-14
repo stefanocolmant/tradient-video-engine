@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": [
+      "ES2023",
+      "DOM"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "types": [
+      "node",
+      "react"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "src/engine/reference-events.ts",
+    "src/engine/clock.test.ts"
+  ]
+}

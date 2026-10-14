@@ -1,0 +1,35 @@
+{
+  "name": "tradient-video-engine",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/engine.mjs preview",
+    "preview": "node tools/engine.mjs preview",
+    "render": "node tools/engine.mjs render",
+    "proof": "node tools/engine.mjs proof",
+    "check": "node tools/check.mjs",
+    "new-film": "node tools/new-film.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.1",
+    "@remotion/cli": "4.0.535",
+    "@remotion/three": "4.0.535",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.535",
+    "three": "0.186.1",
+    "@remotion/bundler": "4.0.535",
+    "@remotion/renderer": "4.0.535"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/three": "0.186.0",
+    "typescript": "7.0.2",
+    "@types/node": "26.6.5"
+  },
+  "version": "1.0.0",
+  "description": "Script-driven Remotion and Three.js scene libraries, production recipes, and Tradient examples",
+  "engines": {
+    "node": ">=22"
+  }
+}

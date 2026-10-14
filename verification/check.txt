@@ -1,0 +1,39 @@
+
+> tradient-video-engine@1.0.0 check
+> node tools/check.mjs
+
+{
+  cableConstruction: {
+    eventMutationMovesFivePhases: true,
+    missingBindingsRejected: true,
+    requiredInputRejected: true,
+    wrongEndpointRejected: true,
+    singlePulseHandoff: true,
+    routeAnchorInMacro: true
+  },
+  limitJourney: {
+    boundToSpokenAnchor: true,
+    missingRecipeRejected: true,
+    neighborStateInactive: true,
+    priceAboveFixedLimit: true
+  },
+  stateFrames: 2446,
+  backwardFrames: 2446,
+  tileHandoffChecks: 144,
+  wordCue: { passes: 1021, previousFrameFalse: true, anchorTrue: true },
+  scriptMutationMovesCue: true,
+  reportCameraDistanceBounded: true,
+  invalidInputsRejected: 7,
+  secondRecords: 82,
+  scope: 'State, script-controlled motion and event relationships; not an aesthetic score or proof of GPU seek parity.'
+}
+{
+  ruleHandoff: true,
+  sourceDestinationMapping: true,
+  preSignalSampleConserved: true,
+  eventMutation: true,
+  missingBindingRejected: true
+}
+{"validScore":true,"seconds":163,"constructionFrameCoverage":4865,"rejected":["gap","overlap","unknown layer","invalid clock","unknown native scene","invalid card label"]}
+{"shots":39,"frames":4865,"layers":19,"assets":33,"assetHashesChecked":33}
+PASS: three source trees, V8 state/cue validation, A23 frame coverage and 72 asset hashes. Visual quality requires separate review.

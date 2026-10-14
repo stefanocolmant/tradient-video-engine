@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {createClock} from './clock';
+const words = [{w:'4',s:0,e:.2},{w:',000',s:.2,e:.5},{w:'meters',s:.5,e:1},{w:'light',s:1,e:1.4},{w:'light',s:3,e:3.4}];
+const a = createClock(words);
+assert.equal(a.at({phrase:'4,000 meters'}), 0);
+assert.equal(a.at({phrase:'4,000 meters',edge:'end'}), 1);
+assert.throws(() => a.at({phrase:'light'}), /Ambiguous cue/);
+assert.throws(() => a.at({phrase:'missing'}), /Missing cue/);
+assert.equal(a.frame({phrase:'light',nth:1}), 90);
+const spec = [{id:'test',at:{phrase:'light',nth:0},until:{phrase:'light',nth:1},what:'Travel',sound:'light_zip'}];
+const original = a.events(spec)[0];
+const retimed = createClock(words.map(w=>({...w,s:w.s*1.5,e:w.e*1.5}))).events(spec)[0];
+assert.equal(original.fr,30);assert.equal(original.dur,60);
+assert.equal(retimed.fr,45);assert.equal(retimed.dur,90);
+assert.equal(original.sound,retimed.sound);
+process.stdout.write('PASS: split numbers, phrase ends, duplicate/missing cues, frame rounding, shared visual/SFX retiming\n');

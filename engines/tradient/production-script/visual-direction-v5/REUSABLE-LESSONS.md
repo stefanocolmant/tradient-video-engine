@@ -1,0 +1,8 @@
+## V5 construction lessons — candidate, 2026-10-14
+Production package: engines/tradient/production-script/visual-direction-v5/. V4 remains rejected and A23 remains the visual target. V5 is a replacement candidate, not an approved benchmark.
+
+The script must supply actual camera knots, required scene parameters, event-bound timings and sound cues. Prose alone does not produce geometry. The new scene adapters expose grounded multi-scale data terrain; price-height threshold crossing; source records returning to history; one instruction formed from condition/quantity/limit; and one continuous book/report world. Reused A23 fiber geometry retains a separate native animation clock and explicit coordinate mapping. Focus requires real hero and environment layer groups; empty placeholders lose the optical treatment.
+
+Review source-to-destination identity: remove the old representation exactly when its encoded instruction field takes over, preserve requested = filled + remaining, and update the software only when its report arrives. Keep captions outside the full moving action envelope across a shared-world cut. Cursor contact must use the actual object's coordinates and spoken anchor, not the end of a longer event interval. Preserve clean-source out-of-order render comparisons; even a fully transparent relocated object can affect depth pixels before its intended entrance.
+
+These are implementation lessons. Dense geometry, faithful timing, a detailed specification and a passing render do not establish A23-level art direction for a new film. Require meaningful moving proofs at both native and phone size for each new scene family; user acceptance stays separate. Old scheduled loop remains paused.
