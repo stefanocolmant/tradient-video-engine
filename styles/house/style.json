@@ -1,0 +1,51 @@
+{
+  "id": "house",
+  "name": "Luminous 3D (house style)",
+  "description": "The engine's own look: a deep navy world with depth, glowing glass panels, neon 3D objects, tall condensed titles and soft bloom with film grain. Built from the Tradient V8 film.",
+  "palette": {
+    "bg": "#040A20",
+    "bg2": "#0E2257",
+    "surface": "#0A1634",
+    "surface2": "#14254F",
+    "text": "#F3F6FF",
+    "muted": "#93A6CF",
+    "accent": "#F2C14E",
+    "accent2": "#7FD8FF",
+    "accent3": "#E0507A",
+    "positive": "#4FD6C4",
+    "negative": "#E0507A",
+    "glow": "#5AA0FF",
+    "line": "#2A3D70"
+  },
+  "fonts": {
+    "display": {"family": "Anton", "files": {"400": "fonts/Anton-400.ttf"}, "weight": 400, "case": "upper", "tracking": 0.01, "lineHeight": 1.02},
+    "body": {"family": "Roboto Condensed", "files": {"400": "fonts/RobotoCondensed-400.ttf", "500": "fonts/RobotoCondensed-500.ttf", "600": "fonts/RobotoCondensed-600.ttf", "700": "fonts/RobotoCondensed-700.ttf", "800": "fonts/RobotoCondensed-800.ttf"}, "weight": 500, "tracking": 0.01, "lineHeight": 1.2},
+    "caption": {"family": "Roboto Condensed", "files": {"600": "fonts/RobotoCondensed-600.ttf", "700": "fonts/RobotoCondensed-700.ttf"}, "weight": 700, "tracking": 0, "lineHeight": 1.15}
+  },
+  "type": {"display": 1, "body": 1, "min": 44},
+  "background": {"kind": "luminous", "intensity": 0.7, "motion": 0.5},
+  "surface": {"kind": "glass", "radius": 18, "border": 2, "shadow": "glow", "blur": 0, "opacity": 1},
+  "emphasis": {"kind": "glow"},
+  "icons": {"kind": "neon3d", "stroke": 1.8},
+  "motion": {"energy": 0.62, "enter": "rise", "ease": "expo", "stagger": 0.07, "transition": "zoom", "transitionFrames": 10, "camera": 0.6, "idle": 0.6, "tilt": 0.6, "lead": 0.12, "avgShot": 2.8},
+  "finish": {"bloom": 0.8, "grain": 0.075, "vignette": 0.5, "chromatic": 0},
+  "captions": {"mode": "subtitle", "position": 0.75, "size": 52, "font": "caption", "case": "none", "maxWords": 6, "stroke": 0, "shadow": true},
+  "layout": {"safeTop": 0.11, "safeBottom": 0.2, "safeSide": 0.075, "align": "center", "density": 1},
+  "sound": {"music": "pulse", "musicVolume": 0.16, "sfx": 0.9},
+  "render3d": true,
+  "art": {
+    "do": [
+      "One glowing hero object per line, big and centred, in deep navy space",
+      "Glass panels with thin light borders and uppercase condensed labels",
+      "Gold for the key word or number, cyan for light and movement, teal/pink for up/down",
+      "Camera handoffs between scenes (zoom through), slow push-ins while a scene holds",
+      "Candles, signals, paths and flows rendered as light"
+    ],
+    "dont": [
+      "No flat white backgrounds or pastel colours",
+      "No more than one accent colour fighting for attention in a frame",
+      "No dense paragraphs on screen: captions carry the words",
+      "No cartoon or toy-like shapes"
+    ]
+  }
+}

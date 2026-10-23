@@ -1,0 +1,22 @@
+{
+  "id": "clean",
+  "name": "Clean (starting point)",
+  "description": "A light editorial look: warm off-white page, black type, one vivid accent, white cards with soft shadows, calm confident motion. A neutral base to make your own.",
+  "palette": {"bg": "#F7F5F0", "bg2": "#EFECE4", "surface": "#FFFFFF", "surface2": "#F2EFE8", "text": "#111111", "muted": "#5E5B55", "accent": "#E8461A", "accent2": "#1D4ED8", "positive": "#0E8A5F", "negative": "#C8283F", "line": "#DDD8CE"},
+  "fonts": {
+    "display": {"family": "Inter", "files": {"800": "fonts/Inter-800.ttf", "900": "fonts/Inter-900.ttf"}, "weight": 800, "case": "none", "tracking": -0.03, "lineHeight": 1.0},
+    "body": {"family": "Inter", "files": {"400": "fonts/Inter-400.ttf", "500": "fonts/Inter-500.ttf", "600": "fonts/Inter-600.ttf", "700": "fonts/Inter-700.ttf"}, "weight": 500, "lineHeight": 1.25},
+    "caption": {"family": "Inter", "files": {"700": "fonts/Inter-700.ttf", "800": "fonts/Inter-800.ttf"}, "weight": 800, "lineHeight": 1.12}
+  },
+  "background": {"kind": "paper", "intensity": 0.35, "motion": 0.3},
+  "surface": {"kind": "solid", "radius": 22, "border": 0, "shadow": "soft"},
+  "emphasis": {"kind": "marker"},
+  "icons": {"kind": "line", "stroke": 2},
+  "motion": {"energy": 0.55, "enter": "rise", "ease": "expo", "stagger": 0.06, "transition": "slide", "transitionFrames": 10, "camera": 0.4, "idle": 0.45, "tilt": 0, "avgShot": 2.8},
+  "finish": {"bloom": 0, "grain": 0.03, "vignette": 0.1},
+  "captions": {"mode": "karaoke", "position": 0.72, "size": 58, "font": "caption", "case": "none", "maxWords": 5, "shadow": false},
+  "layout": {"align": "center"},
+  "sound": {"music": "bright", "musicVolume": 0.13, "sfx": 0.75},
+  "render3d": false,
+  "art": {"do": ["Lots of white space; one idea per frame", "Accent colour only on the word or number that matters", "Real photos or screenshots in white cards"], "dont": ["No glows or neon", "No more than one accent colour per frame", "No dark backgrounds"]}
+}

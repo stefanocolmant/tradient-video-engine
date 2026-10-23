@@ -1,0 +1,218 @@
+{
+  "title": "What happens after you tap Buy",
+  "style": "house",
+  "music": {
+    "track": "auto"
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "line": "You tap Buy. A moment later,",
+      "props": {
+        "text": "You tap *Buy*",
+        "icon": "mouse-pointer-click"
+      }
+    },
+    {
+      "type": "phone",
+      "at": "your app says",
+      "line": "your app says filled.",
+      "props": {
+        "screen": "notification",
+        "time": "9:41",
+        "date": "Wednesday, October 22",
+        "notification": {
+          "app": "Your broker",
+          "title": "Order filled",
+          "body": "Bought 10 shares",
+          "icon": "check",
+          "at": "filled"
+        }
+      }
+    },
+    {
+      "type": "hero",
+      "at": "In that moment",
+      "line": "In that moment, your order took a trip you never see.",
+      "props": {
+        "icon": "route",
+        "label": "A trip you *never see*",
+        "satellites": [
+          "eye-off",
+          "clock"
+        ]
+      }
+    },
+    {
+      "type": "flow",
+      "at": "First, it goes",
+      "line": "First, it goes to your broker.",
+      "props": {
+        "nodes": [
+          {
+            "label": "Your app",
+            "icon": "smartphone"
+          },
+          {
+            "label": "Your broker",
+            "icon": "briefcase",
+            "at": "broker"
+          }
+        ]
+      }
+    },
+    {
+      "type": "hero",
+      "at": "And your broker usually",
+      "line": "And your broker usually doesn't send it to the stock exchange.",
+      "props": {
+        "icon": "landmark",
+        "label": "*Not* the stock exchange",
+        "color": "#E0507A"
+      }
+    },
+    {
+      "type": "compare",
+      "at": "It sends it to a wholesaler",
+      "line": "It sends it to a wholesaler, a giant trading firm.",
+      "props": {
+        "left": {
+          "title": "Stock exchange",
+          "icon": "landmark"
+        },
+        "right": {
+          "title": "Wholesaler",
+          "icon": "building",
+          "points": [
+            "a giant trading firm"
+          ],
+          "at": "wholesaler"
+        },
+        "winner": "right",
+        "winnerAt": "giant trading firm"
+      }
+    },
+    {
+      "type": "number",
+      "at": "More than ninety percent",
+      "line": "More than ninety percent of everyday investors' market orders go this way.",
+      "props": {
+        "value": 90,
+        "suffix": "%",
+        "kicker": "SEC, 2022",
+        "label": "of everyday investors' market orders",
+        "countAt": "ninety percent"
+      }
+    },
+    {
+      "type": "list",
+      "at": "The wholesaler checks",
+      "line": "The wholesaler checks every exchange for the best price.",
+      "props": {
+        "title": "Example quotes",
+        "items": [
+          {
+            "text": "Exchange A",
+            "icon": "landmark",
+            "value": "$100.03"
+          },
+          {
+            "text": "Exchange B",
+            "icon": "landmark",
+            "value": "$100.01"
+          },
+          {
+            "text": "Exchange C",
+            "icon": "landmark",
+            "value": "$100.02"
+          }
+        ],
+        "highlight": 1,
+        "highlightAt": "best price"
+      }
+    },
+    {
+      "type": "hero",
+      "at": "By law",
+      "line": "By law, it can't give you a worse one.",
+      "props": {
+        "icon": "shield-check",
+        "label": "Never a *worse price*",
+        "sub": "the order protection rule"
+      }
+    },
+    {
+      "type": "title",
+      "at": "Then it trades with you",
+      "line": "Then it trades with you. Done.",
+      "props": {
+        "text": "Trade *done*",
+        "icon": "handshake"
+      }
+    },
+    {
+      "type": "timeline",
+      "at": "But the shares",
+      "line": "But the shares haven't actually changed hands yet. That happens one business day later.",
+      "props": {
+        "events": [
+          {
+            "date": "Today",
+            "label": "You tap Buy and get filled"
+          },
+          {
+            "date": "T+1",
+            "label": "Shares and cash change hands",
+            "at": "one business day"
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "at": "It's been the rule",
+      "line": "It's been the rule since May 2024.",
+      "props": {
+        "text": "Since *May 2024*",
+        "kicker": "The T+1 rule",
+        "icon": "calendar-check"
+      }
+    },
+    {
+      "type": "flow",
+      "at": "So next time",
+      "line": "So next time you tap Buy, you'll know where it really went.",
+      "props": {
+        "nodes": [
+          {
+            "label": "Your app",
+            "icon": "smartphone"
+          },
+          {
+            "label": "Broker",
+            "icon": "briefcase"
+          },
+          {
+            "label": "Wholesaler",
+            "icon": "building"
+          },
+          {
+            "label": "Filled",
+            "icon": "check",
+            "at": "really went"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "at": "Follow for more",
+      "line": "Follow for more.",
+      "props": {
+        "text": "Follow for more",
+        "handle": "@yourhandle",
+        "icon": "sparkles"
+      }
+    }
+  ]
+}

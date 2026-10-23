@@ -1,80 +1,104 @@
 # Tradient Video Engine
 
-A portable Remotion + Three.js engine for scripted 3D explainers. It includes the latest **V8 Tradient film**, the **A23 reconstruction scene library and executable production script**, and the **CStack storyboard workflow**. Scenes, timing, cameras, materials, typography and audio are editable code and data.
+Give it a topic; get a finished vertical video. It researches the facts, writes a script that sounds
+spoken, records the voice, builds a visual for every line, adds music and sound effects, renders, and
+checks the file before handing it over. In the house style, in your own brand style, or in a style it
+learns from examples you give it.
 
-## Quick start
+| 1 · House style | 2 · Your own style | 3 · Trained from examples |
+|---|---|---|
+| [![House style](examples/house.jpg)](examples/house.mp4) | [![Paper style](examples/paper.jpg)](examples/paper.mp4) | [![Mission style](examples/mission.jpg)](examples/mission.mp4) |
+| Luminous 3D: the engine's own look. [Video](examples/house.mp4) · [scenes](examples/house-scenes.jpg) | "Paper", made from a brand card in one command. [Video](examples/paper.mp4) · [scenes](examples/paper-scenes.jpg) | "Mission", learned from 5 NASA photos, a NASA video and nasa.gov. [Video](examples/mission.mp4) · [what it learned](styles/mission/card.jpg) |
 
-Install **Node.js 22 or newer** and **FFmpeg**. Then:
+## Start
 
-```sh
-git clone https://github.com/stefanocolmant/tradient-video-engine.git
-cd tradient-video-engine
-npm ci
-npm run check
-npm start
+1. Install [Node.js](https://nodejs.org) 20 or newer.
+2. Get the engine and set it up:
+   ```sh
+   git clone --depth 1 https://github.com/stefanocolmant/tradient-video-engine.git
+   cd tradient-video-engine
+   npm run setup
+   ```
+3. Open the folder in **Claude Code** (or Codex) and ask **"How do I run it?"**
+
+The agent checks the setup, shows the three styles, and from there you just talk to it:
+
+> "Make a 40-second video about why the stock market closes at 4pm, house style."
+> "Build my style: black background, lime accent, Space Grotesk, energetic."
+> "Learn the style of these: three screenshots in styles/_inbox/acme/, and acme.com."
+
+Want to look first? `npm run gallery` opens [START-HERE.html](START-HERE.html).
+
+## The three styles
+
+1. **House style.** A deep navy world with glowing 3D objects, glass panels and condensed titles.
+2. **Your own style.** Colours, fonts (any Google Font), logo and a mood (calm, confident, energetic,
+   playful, luxury, techy): `npm run style:new -- acme --bg "#0E1116" --accent "#FF6B00" --mood energetic`.
+3. **Train a style.** Put pictures, videos and a `links.txt` of websites in `styles/_inbox/<name>/` and
+   run `npm run style:learn -- <name>`. It measures palette, light, texture, the websites' real fonts and
+   colours, and the videos' editing rhythm; the agent adds what the eye sees, then `style:test` renders
+   the look next to your references with a match score. [How it works](docs/TRAIN_A_STYLE.md).
+
+`clean` and `bold` are two more starting points. Every style works with every video:
+change one word in the storyboard to re-render a video in another look.
+
+## How a video is made
+
+```
+brief -> facts (with sources) -> script ✓ -> voice + word timings -> storyboard ✓ -> stills -> render + sound -> QA ✓
 ```
 
-In Remotion Studio select **TradientRulesHandoff** for the latest film. `TradientRulesLimitJourney` preserves V7; earlier compositions remain available for comparison. Studio preview does not export a video.
+Each ✓ is a gate that must pass:
 
-```sh
-# Three-second test export. Outputs are always written to a new directory.
-npm run render -- --range 430:519
+- **Script check:** length for the target duration, a hook in the first line, short spoken sentences,
+  no AI cliches or dashes, nothing the voice will misread, a source for every number. [Rules](docs/SCRIPT.md)
+- **Storyboard check:** every scene starts on a phrase that is really said, text fits, icons and files
+  exist, shots vary, every sentence gets its own visual, every number on screen is sourced. [Rules](docs/STORYBOARD.md)
+- **QA on the real file:** decodes cleanly, right size and length, -14 LUFS loudness with peaks under
+  -1 dBTP, no black, frozen or flashing frames, the hook visible in frame one, nothing the renderer
+  flagged; plus a review sheet of real frames to look at. [Checks](docs/QA.md)
 
-# The full 81.53-second V8 film
-npm run render
+16 scene types (titles, counting numbers, lists, comparisons, charts, flows, timelines, quotes, photos
+and screenshots with callouts, 3D hero objects, proportion grids, before/after, a 3D globe or dotted
+map, a phone, an end card) plus custom scenes in code. [Scene reference](docs/SCENES.md)
 
-# Five still proofs, or select exact frames
-npm run proof -- --frames 430,478,535,628,695
+## Voices
 
-# Reusable scene demos
-npm run preview -- --engine cable
-npm run render -- --engine network
-npm run render -- --engine ship
+Free and local out of the box (Kokoro). Add `ELEVENLABS_API_KEY` or `OPENAI_API_KEY` to `.env` for
+premium voices, or record your own. Every voice is transcribed back and checked word by word when a
+speech recogniser is available. [Voice guide](docs/VOICE.md)
 
-# A23 production-script replay (public replacement photo/audio/font)
-npm run preview -- --engine reference
-```
+## Commands
 
-The first export downloads the Chromium runtime used by Remotion. Rendering is local; no AI subscription, API key, ElevenLabs account or After Effects installation is needed to run the included examples. Exports use PNG intermediates and FFmpeg, so allow several GB of temporary disk space. Each output includes its settings, browser hash, frame range and video SHA-256.
-
-## Make your own film
-
-```sh
-npm run new-film -- my-new-reel
-```
-
-Read [the authoring workflow](docs/AUTHORING.md), complete the new script, and work with your coding assistant using [AGENTS.md](AGENTS.md). For a different film, author the objects and choreography needed by its meaning; use the supplied scene library, recipes, exact event anchors and review process. The V8 example's trading state and numeric relationships are deliberately validated. Changing its prose alone does not create arbitrary new animations.
-
-For an edited V8-compatible score:
-
-```sh
-npm run preview -- --score my-films/my-new-reel/film.production.json
-npm run render -- --score my-films/my-new-reel/film.production.json --range 0:89
-```
-
-A blank template is an authoring brief, **not** a renderable V8 score. New visuals need scene adapters and moving proofs. New narration can be your own recording or an authorized voice service; save the audio locally, align its words, and retime the events. No voice-cloning service or paid generation is bundled.
-
-## What is included
-
-| Folder | Contents |
+| | |
 |---|---|
-| `engines/tradient` | Latest V8 film; connected rule extraction, dimensional chart, optical sample inspection, cable entry, partial fills and report return; V5–V7 recipes preserved |
-| `engines/reference` | A23's 39-shot choreography, scene construction recipes, executable replay, cable/globe/phone/underwater/tower/router/reassembly libraries |
-| `engines/cstack` | Creator-style timeline/storyboard workflow, shared luminous 3D kit and network/cable/ship demos |
-| `templates` | Second-by-second production authoring structure |
-| `tools` | Preview, PNG proof, frame export, full-decode check and scaffold commands |
-| `docs` | Scene map, quality rules, portability, asset provenance and release coverage |
+| `npm run setup` · `npm run doctor` | install everything · check what's ready |
+| `npm run new -- my-video --style house` | start a video folder |
+| `npm run make -- my-video` | script check → voice → storyboard check → stills → render → QA |
+| `npm run style:new` · `style:learn` · `style:test` | your own style · train a style · test a style |
+| `npm run styles` · `npm run icons -- <word>` · `npm run grab -- <url> <video>` | list styles · find icons · screenshot a page |
+| `npm run preview -- my-video` | live preview in Remotion Studio |
+| `npm test` | engine self-test |
 
-See [ENGINE-MAP](docs/ENGINE-MAP.md), [quality rules](docs/QUALITY.md), [release coverage](docs/RELEASE-COVERAGE.md) and [asset provenance](docs/ASSETS.md).
+Full workflow for agents: [AGENTS.md](AGENTS.md). Setup details: [docs/SETUP.md](docs/SETUP.md).
+Problems: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 
-## Public-package differences
+## Inside
 
-The original Instagram soundtrack, photograph and proprietary DIN font are **not distributed**. The reference and CStack examples use a generated geometric image, a silent WAV, and a redistributable font instead. Their geometry and animation sources remain included. Therefore this public reference demo is **not a bit-identical copy of the private A23 export**. The current Tradient example includes its saved soundtrack and redistributable fonts.
+| folder | |
+|---|---|
+| `videos/` | one folder per video: brief, facts, script, voice, storyboard, assets, renders (`out/`) |
+| `styles/` | one folder per style: `style.json`, notes, fonts, card; trained styles keep their references |
+| `examples/` | the three example videos above |
+| `src/` | the renderer (React + Remotion + three.js): scenes, captions, transitions, backgrounds |
+| `tools/` | the commands: checks, voice, mixing, rendering, QA, style tools |
+| `docs/` | the rules and guides |
+| `public/` | fonts, sound effects, music beds, textures |
 
-Private production logs, workstation paths, credentials, browser bundles, old rendered exports and historical Git data are excluded. No live trading integration, broker connection, publishing automation or schedule is included.
+## Licences
 
-## Rendering and licenses
+Code: MIT. Remotion (the renderer) is free for individuals and teams of up to 3; larger companies need
+a Remotion company licence. Fonts are open-licensed; sounds and music are original; example photos and
+frames are NASA public domain. Details: [licenses/THIRD-PARTY.md](licenses/THIRD-PARTY.md).
 
-Use `npm run render` for the supplied export profile. Studio and a generic `remotion render` can differ from the reviewed capture path. Portable mode records the local Chromium binary; it does not promise identical pixels across operating systems. See [portability](docs/PORTABILITY.md).
-
-Authored engine code is MIT; CStack attribution and MIT terms are preserved. Assets have their own notices in [licenses](licenses) and [ASSETS](docs/ASSETS.md). Remotion is a dependency with its own [license](licenses/REMOTION-LICENSE.md); the engine's MIT license does not relicense Remotion or third-party media.
+Version 2.0. Version 1 (the V8 film, A23 replay and CStack engines) is kept at tag `v1.0.0`.

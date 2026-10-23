@@ -1,0 +1,20 @@
+{
+  "title": "Why your phone dies in the cold",
+  "style": "paper",
+  "music": {"track": "auto"},
+  "scenes": [
+    {"type": "number", "line": "Your phone says twenty percent.", "props": {"value": 20, "from": 100, "suffix": "%", "label": "says your phone", "tone": "negative", "countAt": "twenty percent", "countDur": 1.2}},
+    {"type": "hero", "at": "Then it just dies", "line": "Then it just dies.", "props": {"icon": "battery-warning", "label": "Then it *just dies*", "color": "#C8283F"}},
+    {"type": "split", "at": "It's not broken", "line": "It's not broken. It's cold.", "props": {"before": {"label": "Not this", "text": "Broken", "icon": "smartphone", "tone": "negative"}, "after": {"label": "This", "text": "Cold", "icon": "snowflake", "at": "cold"}}},
+    {"type": "flow", "at": "Inside the battery", "line": "Inside the battery, lithium has to move to make power.", "props": {"layout": "horizontal", "nodes": [{"label": "Lithium", "icon": "atom"}, {"label": "Moves", "icon": "move-right", "at": "move"}, {"label": "Power", "icon": "zap", "at": "power"}]}},
+    {"type": "hero", "at": "Cold slows", "line": "Cold slows that chemistry down.", "props": {"icon": "thermometer-snowflake", "label": "Cold *slows* it down", "color": "#2E5EAA"}},
+    {"type": "chart", "at": "So the battery", "line": "So the battery pushes back harder, and the voltage dips.", "props": {"kind": "line", "title": "The voltage *dips*", "values": [10, 9.6, 9.1, 8.2, 7.1, 5.6, 4.2], "tone": "negative", "highlight": {"index": 6, "label": "dips", "at": "dips"}}},
+    {"type": "hero", "at": "Your phone thinks", "line": "Your phone thinks it's empty, so it shuts off to protect itself.", "props": {"icon": "power-off", "label": "Shuts off to *protect itself*"}},
+    {"type": "title", "at": "Apple says", "line": "Apple says iPhones are built for zero to 35 degrees Celsius.", "props": {"kicker": "Apple", "text": "Built for *0 to 35°C*", "icon": "thermometer"}},
+    {"type": "split", "at": "Below that", "line": "Below that, battery life can drop for a while.", "props": {"before": {"label": "Warm", "text": "Lasts all day", "icon": "sun"}, "after": {"label": "Below 0°C", "text": "Drops for a while", "icon": "snowflake", "tone": "negative", "at": "drop"}}},
+    {"type": "title", "at": "The good news", "line": "The good news? It's temporary.", "props": {"text": "It's *temporary*", "icon": "clock"}},
+    {"type": "hero", "at": "Warm it up", "line": "Warm it up, and the charge comes back.", "props": {"icon": "battery-charging", "label": "The charge *comes back*", "color": "#0E8A5F"}},
+    {"type": "title", "at": "Keep it in", "line": "Keep it in an inside pocket.", "props": {"text": "Inside *pocket*", "icon": "shirt"}},
+    {"type": "cta", "at": "Follow for more", "line": "Follow for more.", "props": {"text": "Follow for more", "handle": "@yourhandle"}}
+  ]
+}

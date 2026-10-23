@@ -1,0 +1,13 @@
+{
+  "_why": "What the eye adds to the measurements (looked at card.jpg + refs): space photography and a documentary reel, so a star field instead of colour glows, thin technical outlines like mission graphics, film-like grain from the archival photos, calm documentary captions, line icons rather than neon, and a warmer 'lunar' second accent kept from the photos.",
+  "palette": {"surface": "#16181B", "line": "#33373D"},
+  "fonts": {"display": {"weight": 800, "tracking": -0.02}},
+  "background": {"kind": "stars", "intensity": 0.7},
+  "surface": {"kind": "outline", "radius": 10, "border": 2, "shadow": "none"},
+  "emphasis": {"kind": "color"},
+  "icons": {"kind": "line", "stroke": 1.6},
+  "motion": {"transition": "fade", "transitionFrames": 12, "enter": "rise"},
+  "finish": {"bloom": 0.35, "grain": 0.05, "vignette": 0.45},
+  "captions": {"mode": "subtitle", "maxWords": 6, "size": 52, "position": 0.76},
+  "sound": {"music": "calm"}
+}

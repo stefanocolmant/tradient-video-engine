@@ -1,0 +1,15 @@
+{
+  "provider": "kokoro",
+  "voice": "Kokoro-82M bm_george (local, Apache-2.0)",
+  "seconds": 35.49,
+  "words": 89,
+  "wordsPerSecond": 2.5,
+  "timing": "whisper.cpp (local) word timestamps",
+  "check": {
+    "by": "whisper.cpp (local)",
+    "wer": 0,
+    "rawWer": 0.067,
+    "mismatches": []
+  },
+  "made": "2026-10-23T06:08:31.195Z"
+}

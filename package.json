@@ -1,35 +1,55 @@
 {
   "name": "tradient-video-engine",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
+  "description": "Script-to-video engine for short vertical explainers: write the script, pick or train a style, get a finished, checked MP4.",
   "scripts": {
-    "start": "node tools/engine.mjs preview",
-    "preview": "node tools/engine.mjs preview",
-    "render": "node tools/engine.mjs render",
-    "proof": "node tools/engine.mjs proof",
-    "check": "node tools/check.mjs",
-    "new-film": "node tools/new-film.mjs"
+    "setup": "node tools/setup.mjs",
+    "doctor": "node tools/doctor.mjs",
+    "gallery": "node tools/open.mjs START-HERE.html",
+    "new": "node tools/new-video.mjs",
+    "script:check": "node tools/script-check.mjs",
+    "voice": "node tools/voice.mjs",
+    "storyboard:check": "node tools/storyboard-check.mjs",
+    "stills": "node tools/render.mjs stills",
+    "preview": "node tools/render.mjs studio",
+    "render": "node tools/render.mjs video",
+    "qa": "node tools/qa.mjs",
+    "make": "node tools/make.mjs",
+    "icons": "node tools/icons.mjs",
+    "grab": "node tools/grab.mjs",
+    "styles": "node tools/styles.mjs",
+    "style:new": "node tools/style-new.mjs",
+    "style:learn": "node tools/style-learn.mjs",
+    "style:test": "node tools/style-test.mjs",
+    "test": "node tools/test.mjs",
+    "typecheck": "tsc --noEmit",
+    "docs": "node tools/docs.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "9.8.1",
+    "@remotion/bundler": "4.0.535",
     "@remotion/cli": "4.0.535",
+    "@remotion/renderer": "4.0.535",
     "@remotion/three": "4.0.535",
+    "lucide-static": "1.54.0",
+    "puppeteer-core": "25.12.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "remotion": "4.0.535",
-    "three": "0.186.1",
-    "@remotion/bundler": "4.0.535",
-    "@remotion/renderer": "4.0.535"
+    "three": "0.186.1"
+  },
+  "optionalDependencies": {
+    "kokoro-js": "1.2.1"
   },
   "devDependencies": {
+    "@types/node": "26.6.5",
     "@types/react": "19.3.0",
     "@types/three": "0.186.0",
-    "typescript": "7.0.2",
-    "@types/node": "26.6.5"
+    "typescript": "7.0.2"
   },
-  "version": "1.0.0",
-  "description": "Script-driven Remotion and Three.js scene libraries, production recipes, and Tradient examples",
   "engines": {
-    "node": ">=22"
+    "node": ">=20"
   }
 }

@@ -1,10 +1,14 @@
 node_modules/
-outputs/
-.renders/
+.cache/
 .env
 .env.*
 !.env.example
 .DS_Store
 *.log
 *.tsbuildinfo
-my-films/
+LEDGER.md
+public/_stage/
+videos/*/out/
+videos/_*/
+styles/_inbox/
+styles/*/refs/raw/

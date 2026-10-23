@@ -1,0 +1,101 @@
+{
+  "id": "mission",
+  "name": "Mission",
+  "description": "Learned from 5 picture(s), 1 video(s) and 1 website(s): dark black background, red-orange accent, Inter titles.",
+  "palette": {
+    "bg": "#111212",
+    "text": "#FFFFFF",
+    "accent": "#D83933",
+    "accent2": "#1D3D6A",
+    "surface": "#16181B",
+    "glow": "#1D3D6A",
+    "line": "#33373D"
+  },
+  "fonts": {
+    "display": {
+      "family": "Inter",
+      "weight": 800,
+      "case": "none",
+      "tracking": -0.02,
+      "lineHeight": 1.04,
+      "files": {
+        "700": "fonts/Inter-700.ttf"
+      }
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400,
+      "lineHeight": 1.25,
+      "files": {
+        "400": "fonts/Inter-400.ttf",
+        "600": "fonts/Inter-600.ttf",
+        "700": "fonts/Inter-700.ttf"
+      }
+    }
+  },
+  "background": {
+    "kind": "stars",
+    "intensity": 0.7,
+    "motion": 0.47
+  },
+  "surface": {
+    "kind": "outline",
+    "radius": 10,
+    "border": 2,
+    "shadow": "none",
+    "blur": 0
+  },
+  "emphasis": {
+    "kind": "color"
+  },
+  "icons": {
+    "kind": "line",
+    "stroke": 1.6
+  },
+  "motion": {
+    "energy": 0.53,
+    "enter": "rise",
+    "ease": "expo",
+    "transition": "fade",
+    "transitionFrames": 12,
+    "camera": 0.51,
+    "idle": 0.56,
+    "avgShot": 4.33,
+    "stagger": 0.068
+  },
+  "finish": {
+    "bloom": 0.35,
+    "grain": 0.05,
+    "vignette": 0.45,
+    "chromatic": 0
+  },
+  "captions": {
+    "mode": "subtitle",
+    "maxWords": 6,
+    "size": 52,
+    "case": "none",
+    "font": "caption",
+    "position": 0.76,
+    "shadow": true
+  },
+  "layout": {
+    "align": "center"
+  },
+  "sound": {
+    "music": "calm",
+    "musicVolume": 0.14,
+    "sfx": 0.77
+  },
+  "render3d": true,
+  "learned": {
+    "date": "2026-10-23",
+    "pictures": 5,
+    "videos": [
+      "artemis-resource-reel.mp4"
+    ],
+    "websites": [
+      "https://www.nasa.gov"
+    ]
+  },
+  "_why": "What the eye adds to the measurements (looked at card.jpg + refs): space photography and a documentary reel, so a star field instead of colour glows, thin technical outlines like mission graphics, film-like grain from the archival photos, calm documentary captions, line icons rather than neon, and a warmer 'lunar' second accent kept from the photos."
+}

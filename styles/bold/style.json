@@ -1,0 +1,22 @@
+{
+  "id": "bold",
+  "name": "Bold (starting point)",
+  "description": "A high-energy creator look: near-black background, heavy white type, a yellow highlight box on key words, big pop-up captions, fast cuts. A loud base to make your own.",
+  "palette": {"bg": "#0B0B0C", "bg2": "#18181B", "surface": "#18181B", "surface2": "#232327", "text": "#FFFFFF", "muted": "#A1A1AA", "accent": "#FFE14D", "accent2": "#2EE6A6", "positive": "#2EE6A6", "negative": "#FF4D6D", "line": "#2E2E33"},
+  "fonts": {
+    "display": {"family": "Archivo Black", "files": {"400": "fonts/ArchivoBlack-400.ttf"}, "weight": 400, "case": "upper", "tracking": -0.01, "lineHeight": 1.0},
+    "body": {"family": "Archivo", "files": {"500": "fonts/Archivo-500.ttf", "600": "fonts/Archivo-600.ttf", "700": "fonts/Archivo-700.ttf", "800": "fonts/Archivo-800.ttf"}, "weight": 600, "lineHeight": 1.2},
+    "caption": {"family": "Archivo Black", "files": {"400": "fonts/ArchivoBlack-400.ttf"}, "weight": 400, "lineHeight": 1.05}
+  },
+  "background": {"kind": "noise", "intensity": 0.4, "motion": 0.5},
+  "surface": {"kind": "solid", "radius": 16, "border": 0, "shadow": "none"},
+  "emphasis": {"kind": "box"},
+  "icons": {"kind": "solid", "stroke": 2.4},
+  "motion": {"energy": 0.88, "enter": "pop", "ease": "back", "stagger": 0.04, "transition": "zoom", "transitionFrames": 7, "camera": 0.7, "idle": 0.7, "tilt": 0, "avgShot": 1.9},
+  "finish": {"bloom": 0, "grain": 0.08, "vignette": 0.3},
+  "captions": {"mode": "pop", "position": 0.7, "size": 78, "font": "caption", "case": "upper", "maxWords": 3, "shadow": true, "stroke": 0},
+  "layout": {"align": "center"},
+  "sound": {"music": "drive", "musicVolume": 0.13, "sfx": 1},
+  "render3d": false,
+  "art": {"do": ["One huge word or number per beat", "Yellow box on the single most important word", "Cut every 1.5-2.5 seconds"], "dont": ["No soft pastel colours", "No long sentences on screen", "No slow fades"]}
+}

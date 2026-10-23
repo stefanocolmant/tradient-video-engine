@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tradient Video Engine</title>
+<style>
+  :root {
+    --bg: #0d0f13; --panel: #161a21; --line: #262c36; --text: #eef1f6; --muted: #9aa3b2; --accent: #f2c14e; --accent2: #7fd8ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) { --bg: #f6f5f1; --panel: #ffffff; --line: #e3e0d8; --text: #15171c; --muted: #5d6470; --accent: #b8860b; --accent2: #1d6fd1; }
+  }
+  :root[data-theme="dark"] { --bg: #0d0f13; --panel: #161a21; --line: #262c36; --text: #eef1f6; --muted: #9aa3b2; --accent: #f2c14e; --accent2: #7fd8ff; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 48px 16px 80px; }
+  h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.05; margin: 0 0 14px; letter-spacing: -0.02em; }
+  h2 { font-size: 26px; margin: 56px 0 16px; letter-spacing: -0.01em; }
+  p.lead { font-size: 20px; color: var(--muted); max-width: 760px; margin: 0; }
+  .ask { margin-top: 26px; display: inline-flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 14px 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+  .ask b { color: var(--accent); }
+  code, kbd { font: 15px/1.4 "SF Mono", Menlo, Consolas, monospace; background: color-mix(in srgb, var(--muted) 14%, transparent); padding: 2px 6px; border-radius: 6px; }
+  .styles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  .card video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #000; display: block; }
+  .card .body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .num { font-weight: 800; color: var(--accent); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .card h3 { margin: 0; font-size: 21px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .card .links { margin-top: auto; padding-top: 8px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 14.5px; }
+  a { color: var(--accent2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ol.steps { padding-left: 22px; margin: 0; }
+  ol.steps li { margin: 10px 0; }
+  .flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .flow span { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 15px; }
+  .flow i { color: var(--muted); font-style: normal; }
+  .flow span.gate { border-color: color-mix(in srgb, var(--accent) 60%, transparent); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td { padding: 9px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+  td:first-child { white-space: nowrap; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+  footer { margin-top: 64px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 860px) { .styles { grid-template-columns: 1fr; } .card video { aspect-ratio: 9 / 14; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tradient Video Engine</h1>
+  <p class="lead">Give it a topic. It researches, writes the script, records the voice, builds every scene from the words, adds sound, renders a vertical video and checks it, in the style you pick.</p>
+  <div class="ask">Open this folder in Claude Code (or Codex) and ask: <b>"How do I run it?"</b></div>
+
+  <h2>Pick a style</h2>
+  <div class="styles">
+    <div class="card">
+      <video src="examples/house.mp4" poster="examples/house.jpg" muted autoplay loop playsinline controls preload="metadata"></video>
+      <div class="body">
+        <div class="num">1 · House style</div>
+        <h3>Luminous 3D</h3>
+        <p>The engine's own look: a deep navy world, glowing 3D objects, glass panels, tall condensed titles. Ready to use.</p>
+        <p>Example: what happens after you tap Buy (47 s, sources: SEC).</p>
+        <div class="links"><a href="examples/house.mp4">Video</a><a href="examples/house-scenes.jpg">All scenes</a><a href="styles/house/card.jpg">Style card</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <video src="examples/paper.mp4" poster="examples/paper.jpg" muted autoplay loop playsinline controls preload="metadata"></video>
+      <div class="body">
+        <div class="num">2 · Your own style</div>
+        <h3>From your brand</h3>
+        <p>Your colours, fonts, logo and a mood word, turned into a style in one command. "Paper" was made from a brand card: cream page, serif titles, vermilion accent.</p>
+        <p>Example: why your phone dies in the cold (36 s, sources: Apple, Battery University).</p>
+        <div class="links"><a href="examples/paper.mp4">Video</a><a href="examples/paper-scenes.jpg">All scenes</a><a href="styles/paper/card.jpg">Style card</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <video src="examples/mission.mp4" poster="examples/mission.jpg" muted autoplay loop playsinline controls preload="metadata"></video>
+      <div class="body">
+        <div class="num">3 · Train a style</div>
+        <h3>Learned from examples</h3>
+        <p>Drop pictures, videos and website links; the engine measures them and learns the look. "Mission" was learned from 5 NASA photos, a NASA video and nasa.gov.</p>
+        <p>Example: how far away the Moon is (37 s, sources: NASA).</p>
+        <div class="links"><a href="examples/mission.mp4">Video</a><a href="examples/mission-scenes.jpg">All scenes</a><a href="styles/mission/card.jpg">What it learned</a><a href="styles/mission/test/compare.jpg">References vs result</a></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Set up (once)</h2>
+  <ol class="steps">
+    <li>Install <a href="https://nodejs.org">Node.js</a> 20 or newer.</li>
+    <li>In this folder run <code>npm run setup</code> (2-5 minutes: packages, render browser, free voice).</li>
+    <li>Open the folder in Claude Code or Codex and ask <b>"How do I run it?"</b>. Then just say what video you want.</li>
+  </ol>
+  <p style="color:var(--muted);margin-top:12px">Optional: an ElevenLabs or OpenAI key in <code>.env</code> for premium voices. Details in <a href="docs/SETUP.md">docs/SETUP.md</a>.</p>
+
+  <h2>How every video is made</h2>
+  <div class="flow">
+    <span>Brief</span><i>→</i><span>Facts with sources</span><i>→</i><span class="gate">Script check</span><i>→</i><span>Voice + word timings</span><i>→</i><span class="gate">Storyboard check</span><i>→</i><span>Stills review</span><i>→</i><span>Render + sound</span><i>→</i><span class="gate">QA on the real file</span>
+  </div>
+  <p style="color:var(--muted)">Outlined steps are gates: nothing moves on until they pass. Rules: <a href="docs/SCRIPT.md">script</a>, <a href="docs/STORYBOARD.md">storyboard</a>, <a href="docs/SCENES.md">scenes</a>, <a href="docs/QA.md">quality checks</a>.</p>
+
+  <h2>Or run it yourself</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><td><code>npm run new -- my-video --style house</code></td><td>Start a video folder (brief, facts, script, storyboard).</td></tr>
+      <tr><td><code>npm run make -- my-video</code></td><td>Script check, voice, storyboard check, stills, render, QA.</td></tr>
+      <tr><td><code>npm run style:new -- acme --bg "#0E1116" --accent "#FF6B00" --mood energetic</code></td><td>Your own style (option 2).</td></tr>
+      <tr><td><code>npm run style:learn -- my-look</code></td><td>Train a style from <code>styles/_inbox/my-look/</code> (option 3).</td></tr>
+      <tr><td><code>npm run style:test -- my-look</code></td><td>Sample frames next to the references, with a match score.</td></tr>
+      <tr><td><code>npm run styles</code> · <code>npm run doctor</code></td><td>List styles · check what's installed.</td></tr>
+    </table>
+  </div>
+
+  <footer>
+    Code MIT. Renderer: Remotion (free for individuals and teams up to 3; larger companies need a Remotion licence). Fonts: open licences. Sounds and music: original, made by the engine. Example photos and video frames: NASA, public domain.
+  </footer>
+</main>
+</body>
+</html>

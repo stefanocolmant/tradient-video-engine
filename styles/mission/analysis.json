@@ -1,0 +1,844 @@
+{
+  "style": "mission",
+  "made": "2026-10-23T03:23:10.699Z",
+  "why": {
+    "palette.bg": "colour around the edges of 21 reference picture(s)/frame(s)",
+    "palette.text": "website text colour (most used, highest contrast)",
+    "palette.accent": "website button colour",
+    "palette.accent2": "reference palette",
+    "palette.surface": "website card/panel colour",
+    "fonts.display": "website headings: inter -> Inter (same family on Google Fonts)",
+    "fonts.body": "website body text: sans-serif -> Inter (generic family)",
+    "background.kind": "dark references with glowing highlights, grain 0.46, flatness 0.69",
+    "surface.radius": "median corner radius of 8 website elements",
+    "surface.kind": "website uses translucent glass panels / glowing dark look",
+    "motion": "1 video(s): 13.5 cuts/min, median shot 4.33 s, motion 0.011, 7 dissolve(s) vs 54 cut(s)",
+    "captions": "karaoke captions for a medium edit",
+    "_overrides": "values in overrides.json were applied on top"
+  },
+  "notes": [],
+  "palette": [
+    {
+      "hex": "#0C0A0B",
+      "share": 0.424,
+      "name": "black"
+    },
+    {
+      "hex": "#F6F7F8",
+      "share": 0.148,
+      "name": "white"
+    },
+    {
+      "hex": "#96989B",
+      "share": 0.123,
+      "name": "grey"
+    },
+    {
+      "hex": "#625D59",
+      "share": 0.092,
+      "name": "grey"
+    },
+    {
+      "hex": "#3F2E22",
+      "share": 0.078,
+      "name": "orange"
+    },
+    {
+      "hex": "#1D3D6A",
+      "share": 0.043,
+      "name": "blue"
+    },
+    {
+      "hex": "#565B6E",
+      "share": 0.039,
+      "name": "blue"
+    },
+    {
+      "hex": "#7492C4",
+      "share": 0.031,
+      "name": "blue"
+    },
+    {
+      "hex": "#C19660",
+      "share": 0.018,
+      "name": "orange"
+    },
+    {
+      "hex": "#C43D34",
+      "share": 0.004,
+      "name": "red-orange"
+    }
+  ],
+  "brightness": 0.327,
+  "references": [
+    {
+      "file": "NHQ202211160030.jpg",
+      "kind": "picture",
+      "brightness": 0.283,
+      "contrast": 0.552,
+      "saturation": 0.285,
+      "warmth": 0.374,
+      "edges": 0.181,
+      "flatness": 0.704,
+      "grain": 0.475,
+      "vignette": 0.728,
+      "border": "#19100A",
+      "aspect": 1,
+      "palette": [
+        "#1B100A",
+        "#3A271A",
+        "#7C5B46",
+        "#56340A",
+        "#FFFCF6"
+      ]
+    },
+    {
+      "file": "as08-14-2383.jpg",
+      "kind": "picture",
+      "brightness": 0.122,
+      "contrast": 0.465,
+      "saturation": 0.008,
+      "warmth": -0.001,
+      "edges": 0.07,
+      "flatness": 0.889,
+      "grain": 0.183,
+      "vignette": 0,
+      "border": "#000000",
+      "aspect": 1,
+      "palette": [
+        "#000000",
+        "#80807F",
+        "#717271",
+        "#8F908E",
+        "#A2A2A0"
+      ]
+    },
+    {
+      "file": "as11-40-5903.jpg",
+      "kind": "picture",
+      "brightness": 0.384,
+      "contrast": 0.465,
+      "saturation": 0.056,
+      "warmth": 0.012,
+      "edges": 0.446,
+      "flatness": 0.504,
+      "grain": 1.062,
+      "vignette": 0.719,
+      "border": "#141211",
+      "aspect": 1.025,
+      "palette": [
+        "#0F0E0B",
+        "#625C5E",
+        "#767376",
+        "#9A9A9D",
+        "#888685"
+      ]
+    },
+    {
+      "file": "as17-148-22727.jpg",
+      "kind": "picture",
+      "brightness": 0.194,
+      "contrast": 0.599,
+      "saturation": 0.079,
+      "warmth": -0.102,
+      "edges": 0.294,
+      "flatness": 0.785,
+      "grain": 0.261,
+      "vignette": 1,
+      "border": "#000000",
+      "aspect": 1,
+      "palette": [
+        "#000000",
+        "#D0D2D6",
+        "#A5AFBC",
+        "#2C4467",
+        "#56627A"
+      ]
+    },
+    {
+      "file": "iss035e017673.jpg",
+      "kind": "picture",
+      "brightness": 0.036,
+      "contrast": 0.122,
+      "saturation": 0.061,
+      "warmth": -0.024,
+      "edges": 0.12,
+      "flatness": 0.945,
+      "grain": 0.582,
+      "vignette": 0.627,
+      "border": "#0B0609",
+      "aspect": 1.504,
+      "palette": [
+        "#0B0607",
+        "#13111A",
+        "#161D33",
+        "#2E1B17",
+        "#5C3A1F"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-00.jpg",
+      "kind": "video-frame",
+      "brightness": 0.205,
+      "contrast": 0.493,
+      "saturation": 0.252,
+      "warmth": -0.352,
+      "edges": 0.356,
+      "flatness": 0.724,
+      "grain": 0.143,
+      "vignette": 0.789,
+      "border": "#02070B",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#03080D",
+        "#0C1A2D",
+        "#122D52",
+        "#204986",
+        "#EBEFF3"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-01.jpg",
+      "kind": "video-frame",
+      "brightness": 0.179,
+      "contrast": 0.392,
+      "saturation": 0.294,
+      "warmth": -0.354,
+      "edges": 0.223,
+      "flatness": 0.614,
+      "grain": 0.141,
+      "vignette": 0.63,
+      "border": "#02080E",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#02070B",
+        "#0E223D",
+        "#15325C",
+        "#0A1524",
+        "#204987"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-02.jpg",
+      "kind": "video-frame",
+      "brightness": 0.516,
+      "contrast": 0.288,
+      "saturation": 0.254,
+      "warmth": -0.356,
+      "edges": 0.167,
+      "flatness": 0.616,
+      "grain": 0.34,
+      "vignette": 0.442,
+      "border": "#62749F",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#6575A2",
+        "#7E849A",
+        "#474C63",
+        "#7283A9",
+        "#97959B"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-03.jpg",
+      "kind": "video-frame",
+      "brightness": 0.531,
+      "contrast": 0.271,
+      "saturation": 0.229,
+      "warmth": -0.323,
+      "edges": 0.169,
+      "flatness": 0.781,
+      "grain": 0.301,
+      "vignette": 0.346,
+      "border": "#505466",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#838CA4",
+        "#6E7DA4",
+        "#53576A",
+        "#828289",
+        "#B9B8BE"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-04.jpg",
+      "kind": "video-frame",
+      "brightness": 0.376,
+      "contrast": 0.537,
+      "saturation": 0.065,
+      "warmth": 0.01,
+      "edges": 0.523,
+      "flatness": 0.558,
+      "grain": 1.179,
+      "vignette": 0.525,
+      "border": "#1C1C19",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#151411",
+        "#2B2C2B",
+        "#484848",
+        "#666767",
+        "#868A8D"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-05.jpg",
+      "kind": "video-frame",
+      "brightness": 0.523,
+      "contrast": 0.47,
+      "saturation": 0.226,
+      "warmth": -0.209,
+      "edges": 0.539,
+      "flatness": 0.573,
+      "grain": 0.993,
+      "vignette": 0.027,
+      "border": "#758DA5",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#6E869C",
+        "#95ADBF",
+        "#555F6B",
+        "#242C3C",
+        "#C4DDF0"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-06.jpg",
+      "kind": "video-frame",
+      "brightness": 0.669,
+      "contrast": 0.425,
+      "saturation": 0.298,
+      "warmth": -0.391,
+      "edges": 0.166,
+      "flatness": 0.677,
+      "grain": 0.191,
+      "vignette": 0.089,
+      "border": "#8DA1CF",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#8BA0CF",
+        "#A9BDE8",
+        "#C9DAF6",
+        "#E6EDF0",
+        "#4E5355"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-07.jpg",
+      "kind": "video-frame",
+      "brightness": 0.295,
+      "contrast": 0.275,
+      "saturation": 0.136,
+      "warmth": -0.129,
+      "edges": 0.139,
+      "flatness": 0.526,
+      "grain": 0.288,
+      "vignette": 0.038,
+      "border": "#474653",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#5B5661",
+        "#776D79",
+        "#404253",
+        "#56556A",
+        "#1F2223"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-08.jpg",
+      "kind": "video-frame",
+      "brightness": 0.079,
+      "contrast": 0.26,
+      "saturation": 0.038,
+      "warmth": -0.017,
+      "edges": 0.093,
+      "flatness": 0.937,
+      "grain": 0.123,
+      "vignette": 0.765,
+      "border": "#0A080C",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#0B0A0D",
+        "#1F1F1E",
+        "#363632",
+        "#52544F",
+        "#787F80"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-09.jpg",
+      "kind": "video-frame",
+      "brightness": 0.549,
+      "contrast": 0.267,
+      "saturation": 0.593,
+      "warmth": -0.828,
+      "edges": 0.115,
+      "flatness": 0.711,
+      "grain": 0.247,
+      "vignette": 0,
+      "border": "#74A3D8",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#285FA3",
+        "#4282CB",
+        "#60A3E6",
+        "#86B3DD",
+        "#96AABF"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-10.jpg",
+      "kind": "video-frame",
+      "brightness": 0.607,
+      "contrast": 0.374,
+      "saturation": 0.287,
+      "warmth": -0.1,
+      "edges": 0.292,
+      "flatness": 0.483,
+      "grain": 0.469,
+      "vignette": 0.295,
+      "border": "#3D5D7B",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#1F597E",
+        "#C2B29E",
+        "#EADBCB",
+        "#ABB5C4",
+        "#4283AF"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-11.jpg",
+      "kind": "video-frame",
+      "brightness": 0.411,
+      "contrast": 0.204,
+      "saturation": 0.259,
+      "warmth": -0.27,
+      "edges": 0.151,
+      "flatness": 0.547,
+      "grain": 0.327,
+      "vignette": 0,
+      "border": "#5E6671",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#2D4971",
+        "#4F6177",
+        "#968A7A",
+        "#3C577C",
+        "#5D6774"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-12.jpg",
+      "kind": "video-frame",
+      "brightness": 0.281,
+      "contrast": 0.387,
+      "saturation": 0.07,
+      "warmth": 0.057,
+      "edges": 0.486,
+      "flatness": 0.721,
+      "grain": 1.095,
+      "vignette": 0.618,
+      "border": "#20211E",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#1B1C1A",
+        "#2E302C",
+        "#4A4C46",
+        "#6C6E69",
+        "#91958E"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-13.jpg",
+      "kind": "video-frame",
+      "brightness": 0.135,
+      "contrast": 0.271,
+      "saturation": 0.28,
+      "warmth": -0.41,
+      "edges": 0.133,
+      "flatness": 0.696,
+      "grain": 0.107,
+      "vignette": 0.785,
+      "border": "#03090F",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#02070B",
+        "#0A1525",
+        "#0E233F",
+        "#163460",
+        "#1E4988"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-14.jpg",
+      "kind": "video-frame",
+      "brightness": 0.12,
+      "contrast": 0.267,
+      "saturation": 0.09,
+      "warmth": 0.022,
+      "edges": 0.349,
+      "flatness": 0.814,
+      "grain": 0.629,
+      "vignette": 0.414,
+      "border": "#161012",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#0B080A",
+        "#232024",
+        "#3E3A3E",
+        "#544F3B",
+        "#270E0A"
+      ]
+    },
+    {
+      "file": "artemis-resource-reel-15.jpg",
+      "kind": "video-frame",
+      "brightness": 0.363,
+      "contrast": 0.497,
+      "saturation": 0.191,
+      "warmth": 0.103,
+      "edges": 0.373,
+      "flatness": 0.691,
+      "grain": 0.6,
+      "vignette": 0,
+      "border": "#263230",
+      "aspect": 1.773,
+      "weight": 0.1875,
+      "palette": [
+        "#1F2925",
+        "#3C4940",
+        "#63313D",
+        "#758475",
+        "#EDF6F3"
+      ]
+    },
+    {
+      "file": "site-1-desktop.jpg",
+      "kind": "website",
+      "brightness": 0.515,
+      "contrast": 0.713,
+      "saturation": 0.054,
+      "warmth": 0.069,
+      "edges": 0.508,
+      "flatness": 0.555,
+      "grain": 0.311,
+      "vignette": 0,
+      "border": "#E8E7E5",
+      "aspect": 1.6,
+      "weight": 0.5,
+      "palette": [
+        "#FDFDFD",
+        "#0E0C09",
+        "#82817A",
+        "#605F59",
+        "#24211C"
+      ]
+    },
+    {
+      "file": "site-1-page.jpg",
+      "kind": "website",
+      "brightness": 0.428,
+      "contrast": 0.806,
+      "saturation": 0.058,
+      "warmth": 0.022,
+      "edges": 0.401,
+      "flatness": 0.786,
+      "grain": 0.283,
+      "vignette": 0,
+      "border": "#FAFAFA",
+      "aspect": 0.267,
+      "weight": 0.5,
+      "palette": [
+        "#0E0D0E",
+        "#FCFCFC",
+        "#332F2D",
+        "#63605F",
+        "#A49C99"
+      ]
+    },
+    {
+      "file": "site-1-phone.jpg",
+      "kind": "website",
+      "brightness": 0.625,
+      "contrast": 0.737,
+      "saturation": 0.078,
+      "warmth": 0.068,
+      "edges": 0.431,
+      "flatness": 0.667,
+      "grain": 0.162,
+      "vignette": 0.587,
+      "border": "#232221",
+      "aspect": 0.462,
+      "weight": 0.5,
+      "palette": [
+        "#FEFDFD",
+        "#060605",
+        "#979590",
+        "#72706B",
+        "#52514F"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "file": "artemis-resource-reel.mp4",
+      "seconds": 240,
+      "size": [
+        640,
+        360
+      ],
+      "aspect": 1.778,
+      "cuts": 54,
+      "cutsPerMinute": 13.5,
+      "shotMedian": 4.33,
+      "shotMean": 4.36,
+      "dissolves": 7,
+      "hardCuts": 47,
+      "motion": 0.0112,
+      "hasAudio": true,
+      "frames": [
+        {
+          "file": "refs/artemis-resource-reel-00.jpg",
+          "t": 2.57
+        },
+        {
+          "file": "refs/artemis-resource-reel-01.jpg",
+          "t": 20.13
+        },
+        {
+          "file": "refs/artemis-resource-reel-02.jpg",
+          "t": 31.17
+        },
+        {
+          "file": "refs/artemis-resource-reel-03.jpg",
+          "t": 35.47
+        },
+        {
+          "file": "refs/artemis-resource-reel-04.jpg",
+          "t": 39.47
+        },
+        {
+          "file": "refs/artemis-resource-reel-05.jpg",
+          "t": 82.13
+        },
+        {
+          "file": "refs/artemis-resource-reel-06.jpg",
+          "t": 95.1
+        },
+        {
+          "file": "refs/artemis-resource-reel-07.jpg",
+          "t": 114.33
+        },
+        {
+          "file": "refs/artemis-resource-reel-08.jpg",
+          "t": 121.83
+        },
+        {
+          "file": "refs/artemis-resource-reel-09.jpg",
+          "t": 130.53
+        },
+        {
+          "file": "refs/artemis-resource-reel-10.jpg",
+          "t": 152.17
+        },
+        {
+          "file": "refs/artemis-resource-reel-11.jpg",
+          "t": 162.57
+        },
+        {
+          "file": "refs/artemis-resource-reel-12.jpg",
+          "t": 184.4
+        },
+        {
+          "file": "refs/artemis-resource-reel-13.jpg",
+          "t": 195.5
+        },
+        {
+          "file": "refs/artemis-resource-reel-14.jpg",
+          "t": 211
+        },
+        {
+          "file": "refs/artemis-resource-reel-15.jpg",
+          "t": 230.57
+        }
+      ]
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.nasa.gov",
+      "title": "NASA",
+      "bodyBg": "rgb(255, 255, 255)",
+      "topBackgrounds": [
+        [
+          "rgb(255, 255, 255)",
+          7297920
+        ],
+        [
+          "rgb(0, 0, 0)",
+          4286015.5
+        ],
+        [
+          "rgb(246, 246, 246)",
+          2588620.4897460938
+        ],
+        [
+          "rgb(23, 23, 27)",
+          1097550
+        ],
+        [
+          "rgb(216, 57, 51)",
+          10258.862548828125
+        ]
+      ],
+      "topText": [
+        [
+          "rgb(255, 255, 255)",
+          904287.1969280003
+        ],
+        [
+          "rgb(27, 27, 27)",
+          403957.345024
+        ],
+        [
+          "rgb(0, 0, 0)",
+          138913.28
+        ],
+        [
+          "rgb(185, 185, 187)",
+          55615.36000000001
+        ]
+      ],
+      "topFonts": [
+        [
+          "inter, sans-serif",
+          685957.6811520001
+        ],
+        [
+          "\"Public Sans Web\", sans-serif",
+          645406.4
+        ],
+        [
+          "inter",
+          177203.30240000004
+        ],
+        [
+          "dm-mono",
+          33743.36
+        ]
+      ],
+      "headings": [
+        [
+          "inter, sans-serif|700|none|normal",
+          13047.072
+        ],
+        [
+          "inter, sans-serif|800|none|normal",
+          1104
+        ],
+        [
+          "dm-mono|500|uppercase|3.5px",
+          638.4
+        ]
+      ],
+      "body": [
+        [
+          "\"Public Sans Web\", sans-serif|400|none|normal",
+          1481
+        ],
+        [
+          "\"Public Sans Web\", sans-serif|700|none|normal",
+          671
+        ],
+        [
+          "inter|400|none|normal",
+          403
+        ]
+      ],
+      "buttons": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(86, 92, 101)",
+          "radius": 0,
+          "border": "rgb(86, 92, 101)",
+          "bw": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(86, 92, 101)",
+          "radius": 0,
+          "border": "rgb(86, 92, 101)",
+          "bw": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(86, 92, 101)",
+          "radius": 0,
+          "border": "rgb(86, 92, 101)",
+          "bw": 0
+        },
+        {
+          "bg": "rgb(216, 57, 51)",
+          "color": "rgb(255, 255, 255)",
+          "radius": 4,
+          "border": "rgb(255, 255, 255)",
+          "bw": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "radius": 0,
+          "border": "rgb(255, 255, 255)",
+          "bw": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "radius": 0,
+          "border": "rgb(255, 255, 255)",
+          "bw": 0
+        }
+      ],
+      "radii": [
+        4,
+        25,
+        25,
+        25,
+        40,
+        40,
+        40,
+        40
+      ],
+      "glass": 0,
+      "shadows": 1,
+      "hardShadows": 0,
+      "vars": {
+        "--wp-block-synced-color": "#7a00df",
+        "--wp-bound-block-color": "var(--wp-block-synced-color)",
+        "--wp-editor-canvas-background": "#ddd",
+        "--wp-admin-theme-color": "#007cba",
+        "--wp-admin-theme-color-darker-10": "#006ba1",
+        "--wp-admin-theme-color-darker-20": "#005a87",
+        "--wp--preset--font-size--normal": "16px",
+        "--wp--preset--font-size--huge": "42px"
+      },
+      "logo": "https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg"
+    }
+  ]
+}

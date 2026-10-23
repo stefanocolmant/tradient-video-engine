@@ -1,0 +1,134 @@
+{
+  "title": "How far away the Moon really is",
+  "style": "mission",
+  "music": {
+    "track": "auto"
+  },
+  "scenes": [
+    {
+      "type": "image",
+      "line": "You'd think the Moon is close. It isn't.",
+      "props": {
+        "src": "assets/earthrise.jpg",
+        "frame": "full",
+        "motion": "push",
+        "caption": "It *isn't* close",
+        "credit": "NASA \u00b7 Apollo 8"
+      }
+    },
+    {
+      "type": "number",
+      "at": "It sits about",
+      "line": "It sits about three hundred eighty-four thousand kilometers away.",
+      "props": {
+        "value": 384000,
+        "suffix": " km",
+        "label": "from Earth to the Moon",
+        "kicker": "NASA",
+        "countAt": "three hundred eighty-four thousand kilometers",
+        "countDur": 1.4
+      }
+    },
+    {
+      "type": "grid",
+      "at": "That gap could hold",
+      "line": "That gap could hold thirty Earths, side by side.",
+      "props": {
+        "total": 30,
+        "highlight": 30,
+        "cols": 6,
+        "icon": "earth",
+        "label": "30 Earths, side by side",
+        "highlightAt": "thirty Earths"
+      }
+    },
+    {
+      "type": "flow",
+      "at": "Even light",
+      "line": "Even light needs more than a second to cross it.",
+      "props": {
+        "layout": "horizontal",
+        "title": "Light: *1.28 s*",
+        "nodes": [
+          {
+            "label": "Earth",
+            "icon": "earth"
+          },
+          {
+            "label": "Moon",
+            "icon": "moon",
+            "at": "cross it"
+          }
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "at": "The Apollo 11 crew",
+      "line": "The Apollo 11 crew needed about three days just to get there.",
+      "props": {
+        "title": "Apollo 11",
+        "events": [
+          {
+            "date": "Day 0",
+            "label": "Launch, July 16, 1969"
+          },
+          {
+            "date": "Day 3",
+            "label": "In orbit around the Moon",
+            "at": "three days"
+          }
+        ]
+      }
+    },
+    {
+      "type": "number",
+      "at": "And it's drifting",
+      "line": "And it's drifting. Every year, the Moon slips almost four centimeters farther away.",
+      "props": {
+        "value": 3.8,
+        "decimals": 1,
+        "suffix": " cm",
+        "label": "farther away, every year",
+        "countAt": "four centimeters",
+        "kicker": "It's drifting",
+        "countDur": 2.4
+      }
+    },
+    {
+      "type": "hero",
+      "at": "About as fast",
+      "line": "About as fast as your fingernails grow.",
+      "props": {
+        "icon": "hand",
+        "label": "Fingernail *speed*"
+      }
+    },
+    {
+      "type": "image",
+      "at": "So the Moon",
+      "line": "So the Moon you'll see tonight is a little farther than the one astronauts walked on.",
+      "props": {
+        "src": "assets/aldrin.jpg",
+        "frame": "full",
+        "motion": "push",
+        "focus": {
+          "x": 0.45,
+          "y": 0.4
+        },
+        "caption": "A little *farther* tonight",
+        "credit": "NASA \u00b7 Apollo 11"
+      }
+    },
+    {
+      "type": "cta",
+      "at": "Follow for more",
+      "line": "Follow for more space facts.",
+      "props": {
+        "text": "Follow for more",
+        "handle": "@yourhandle",
+        "icon": "rocket"
+      }
+    }
+  ]
+}
