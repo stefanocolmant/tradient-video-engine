@@ -52,6 +52,13 @@ t('bad enums are reported', () => { const r = validateStyle({palette: {bg: '#000
 console.log('alignment');
 t('pauses land on punctuation', () => { const tk = tokens('Hello there. How are you?'); const w = fromSpeech(tk, [[0, 0.8], [1.2, 2.0]]); assert.ok(w[2].s >= 1.19); });
 t('recognised words map onto the script', () => { const tk = tokens('You tap Buy now'); const r = fromRecognised(tk, [{word: 'You', start: 0, end: 0.2}, {word: 'tap', start: 0.2, end: 0.4}, {word: 'by', start: 0.4, end: 0.6}, {word: 'now', start: 0.6, end: 0.8}]); assert.equal(r.words[2].s, 0.4); assert.equal(r.mismatches.length, 0); });
+t('spoken numbers match digits; swallowed words share the time', () => {
+  const tk = tokens('filled near forty-six. Want a floor? fifty dollars now');
+  const heard = [['filled', 0, 0.5], ['near', 0.5, 0.9], ['$46.', 0.9, 1.9], ['Wanna', 1.9, 2.3], ['floor?', 2.3, 2.8], ['$50', 3, 3.8], ['now', 3.8, 4.1]];
+  const w = fromRecognised(tk, heard.map(([word, start, end]) => ({word, start, end}))).words;
+  assert.equal(w[2].s, 0.9); assert.equal(w[3].s, 1.9); assert.ok(w[4].s > 1.9 && w[4].e <= 2.3);
+  assert.equal(w[6].s, 3); assert.ok(w[6].e > 3.2 && w[7].s === w[6].e && w[7].e === 3.8);
+});
 
 console.log('beats and sounds');
 t('list items without cues are spread over the scene', () => { const f = beats.list({items: [{text: 'a'}, {text: 'b'}, {text: 'c'}]}, 90, 30); assert.equal(f[0], 0); assert.ok(f[2] > f[1]); });

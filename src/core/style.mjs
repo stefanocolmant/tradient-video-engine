@@ -35,7 +35,7 @@ export const BASE = {
   emphasis: {kind: 'color', color: null},
   icons: {kind: 'line', stroke: 2, color: null},
   motion: {energy: 0.6, enter: 'rise', ease: 'expo', stagger: 0.06, transition: 'fade', transitionFrames: 8, camera: 0.4, idle: 0.4, tilt: 0, lead: 0.12, avgShot: 2.6},
-  finish: {bloom: 0, grain: 0.04, vignette: 0.25, chromatic: 0, halftone: 0, scanlines: 0, blur: 0, tint: null, tintAmount: 0},
+  finish: {bloom: 0, grain: 0.04, vignette: 0.25, halftone: 0, scanlines: 0, tint: null, tintAmount: 0},
   captions: {mode: 'pop', position: 0.72, size: 64, font: 'caption', color: null, highlight: null, box: false, boxColor: null, case: 'none', maxWords: 3, stroke: 0, shadow: true},
   layout: {safeTop: 0.11, safeBottom: 0.22, safeSide: 0.075, align: 'center', density: 1},
   sound: {music: 'pulse', musicVolume: 0.14, sfx: 0.8},
@@ -90,7 +90,7 @@ export function normalizeStyle(raw = {}) {
     const k = keys.at(-1); const v = Number(o[k]); o[k] = Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : BASE[keys[0]][k];
   };
   [['motion.energy', 0, 1], ['motion.stagger', 0, 0.4], ['motion.transitionFrames', 0, 30], ['motion.camera', 0, 1], ['motion.idle', 0, 1], ['motion.tilt', 0, 1], ['motion.lead', 0, 0.4],
-    ['finish.bloom', 0, 1.5], ['finish.grain', 0, 0.4], ['finish.vignette', 0, 1], ['finish.chromatic', 0, 1], ['finish.halftone', 0, 1], ['finish.scanlines', 0, 1], ['finish.blur', 0, 4], ['finish.tintAmount', 0, 1],
+    ['finish.bloom', 0, 1.5], ['finish.grain', 0, 0.4], ['finish.vignette', 0, 1], ['finish.halftone', 0, 1], ['finish.scanlines', 0, 1], ['finish.tintAmount', 0, 1],
     ['captions.position', 0.3, 0.86], ['captions.size', 28, 140], ['captions.maxWords', 1, 9], ['captions.stroke', 0, 12],
     ['layout.safeTop', 0, 0.3], ['layout.safeBottom', 0, 0.35], ['layout.safeSide', 0.02, 0.2], ['layout.density', 0.6, 1.6],
     ['surface.radius', 0, 80], ['surface.border', 0, 8], ['surface.blur', 0, 40], ['surface.opacity', 0, 1],

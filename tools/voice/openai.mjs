@@ -11,7 +11,7 @@ export async function speak(text, {voice = DEFAULT_VOICE, speed = 1, instruction
   const res = await fetch('https://api.openai.com/v1/audio/speech', {
     method: 'POST',
     headers: {Authorization: `Bearer ${key}`, 'Content-Type': 'application/json'},
-    body: JSON.stringify({model: 'gpt-4o-mini-tts', voice, input: text, instructions, response_format: 'wav', speed}),
+    body: JSON.stringify({model: 'gpt-4o-mini-tts', voice, input: text, instructions, response_format: 'wav', ...(speed !== 1 ? {speed} : {})}),
   });
   if (!res.ok) throw new Error(`OpenAI said ${res.status}: ${(await res.text()).slice(0, 300)}`);
   return {wav: Buffer.from(await res.arrayBuffer()), label: `OpenAI gpt-4o-mini-tts ${voice}`, sent: text.length};

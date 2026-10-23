@@ -298,7 +298,7 @@ export async function learnStyle(name, a = {}) {
     emphasis: {kind: dark && glowy ? 'glow' : sat > 0.45 ? 'color' : !dark && energy > 0.6 ? 'marker' : 'color'},
     icons: {kind: dark && glowy ? 'neon3d' : flat > 0.78 ? 'solid' : 'line', stroke: flat > 0.78 ? 2.4 : 2},
     motion,
-    finish: {bloom: dark && glowy ? 0.7 : 0, grain: +clamp(grainV / 30, 0.02, 0.16).toFixed(3), vignette: +clamp(vign * 1.4, 0.05, dark ? 0.65 : 0.2).toFixed(2), chromatic: 0},
+    finish: {bloom: dark && glowy ? 0.7 : 0, grain: +clamp(grainV / 30, 0.02, 0.16).toFixed(3), vignette: +clamp(vign * 1.4, 0.05, dark ? 0.65 : 0.2).toFixed(2)},
     captions,
     layout: {align: 'center'},
     sound: {music: energy > 0.72 ? 'drive' : energy < 0.35 ? 'calm' : dark ? 'pulse' : 'bright', musicVolume: 0.14, sfx: +clamp(0.5 + energy * 0.5, 0.4, 1).toFixed(2)},

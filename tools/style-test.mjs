@@ -96,6 +96,12 @@ export async function testStyle(id, a = {}) {
     score = {palette: +pScore.toFixed(0), light: +bScore.toFixed(0), overall: +(pScore * 0.7 + bScore * 0.3).toFixed(0), meanDeltaE: +meanDE.toFixed(1), ourBrightness: +ourBright.toFixed(2), refBrightness: refBright};
     writeJSON(path.join(outDir, 'score.json'), score);
   }
+  // A style without reference pictures shows its sample frames on its card: refresh it now.
+  if (!refs.length) {
+    const {renderCard} = await import('./style-learn.mjs');
+    const {loadStyle} = await import('./lib/project.mjs');
+    await renderCard(id, loadStyle(id).style, []);
+  }
   let videoFile = null;
   if (a.video) {
     const out = await renderVideo(dir, {draft: true, 'no-qa': true});

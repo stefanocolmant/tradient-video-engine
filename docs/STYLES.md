@@ -48,22 +48,25 @@ colours are derived with guaranteed contrast (text 4.5:1, accents and muted text
 | `fonts.display` / `body` / `caption` / `mono` | `{family, files: {weight: path}, weight, case: "upper"\|"none", tracking, lineHeight}` | titles / labels and cards / captions / code |
 | `type.display` / `body` / `min` | scale, scale, px | size multipliers; the smallest text allowed (44) |
 | `background.kind` | `luminous` `gradient` `solid` `grid` `dots` `paper` `aurora` `noise` `stars` `image` | the world behind every scene (`image` uses `background.image`) |
-| `background.intensity` / `motion` | 0-1 | how strong / how much it drifts |
+| `background.intensity` / `motion` / `angle` | 0-1 / 0-1 / degrees | how strong / how much it drifts / gradient direction |
 | `surface.kind` | `glass` `solid` `outline` `none` | card language |
 | `surface.radius` / `border` / `shadow` | px / px / `glow` `soft` `hard` `none` | card shape |
+| `surface.borderColor` / `opacity` | colour / 0-1 | card border colour (default from the palette) / card fill strength |
 | `emphasis.kind` | `color` `marker` `underline` `box` `glow` | how a `*highlighted*` word looks |
 | `icons.kind` / `stroke` | `neon3d` `glass3d` `line` `duotone` `solid` / width | icon look (3D kinds draw real 3D tubes) |
 | `motion.energy` | 0-1 | overall pace of entrances |
-| `motion.enter` | `rise` `pop` `slam` `mask` `fade` `blur` | how things arrive |
+| `motion.enter` | `rise` `pop` `slam` `mask` `fade` `blur` `type` | how things arrive (`type`: appear in place, no movement) |
 | `motion.ease` | `expo` `back` `smooth` `snap` `spring` | the feel of every move |
 | `motion.transition` / `transitionFrames` | `cut` `fade` `slide` `zoom` `whip` `wipe` `flash` `blur` / frames | between scenes |
 | `motion.camera` / `idle` / `tilt` | 0-1 | slow push-in / idle drift of held layouts / 3D tilt of scenes |
 | `motion.avgShot` | seconds | the rhythm the storyboard aims for |
+| `motion.lead` | seconds | how early a scene starts before its cue word (0.12) |
 | `finish.bloom` / `grain` / `vignette` | 0-1.5 / 0-0.4 / 0-1 | glow / film grain / darkened corners |
 | `finish.halftone` / `scanlines` / `tint` + `tintAmount` | 0-1 / 0-1 / colour + 0-1 | print dots / screen lines / colour wash |
 | `captions.mode` | `subtitle` `pop` `karaoke` `none` | caption look |
 | `captions.size` / `position` / `maxWords` / `case` / `font` | px / 0-1 of height / words / `upper`\|`none` / `caption`\|`display`\|`body` | caption details (`box`, `boxColor`, `highlight`, `stroke`, `shadow` too) |
 | `layout.safeTop` / `safeBottom` / `safeSide` | 0-1 | margins kept clear of the app's buttons |
+| `layout.align` / `density` | `center` \| `left` / 0.6-1.6 | alignment of statement scenes and list titles / spacing inside cards |
 | `sound.music` / `musicVolume` / `sfx` | `pulse` `bright` `drive` `calm` or a file / 0-1 / 0-1.5 | soundtrack bed, its level, effects level |
 | `render3d` | true/false | allow 3D (globe planet, 3D icons) |
 | `logo` | path in the style folder | used on the end card |

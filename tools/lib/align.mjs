@@ -11,11 +11,22 @@ const weight = (t) => syllables(t.raw) + 0.35;
 // voice mistake, so they are not reported.
 const SOUNDS_ALIKE = [['buy', 'by', 'bye'], ['to', 'too', 'two'], ['for', 'four'], ['their', 'there', "they're"], ['your', "you're"], ['its', "it's"], ['know', 'no'], ['right', 'write'], ['one', 'won'], ['eight', 'ate'], ['hour', 'our'], ['here', 'hear'], ['weather', 'whether'], ['whole', 'hole'], ['ok', 'okay']];
 const NUMBERISH = /^(\d[\d,.%]*|zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|billion|trillion|percent|point|dollars?)$/;
+const numberish = (w) => String(w ?? '').toLowerCase().split(/[-\s]+/).filter(Boolean).every((p) => NUMBERISH.test(norm(p)));
+const unitOnly = (w) => /^(percent|point|dollars?)$/.test(norm(w ?? '')); // "fifty dollars" is written "$50": the number takes it
 export const harmless = (a, b) => {
   const x = norm(a ?? ''), y = norm(b ?? '');
-  const numberish = (w) => String(w ?? '').toLowerCase().split(/[-\s]+/).filter(Boolean).every((p) => NUMBERISH.test(norm(p)));
   if (numberish(a) || numberish(b) || /\d/.test(b ?? '') || /\d/.test(a ?? '')) return true;
   return SOUNDS_ALIKE.some((g) => g.includes(x) && g.includes(y));
+};
+
+// How far apart a script word and a recognised word are (0 = the same word).
+const cost = (a, b, rawA, rawB) => {
+  if (a === b) return 0;
+  if (numberish(rawA) && /\d/.test(rawB ?? '')) return unitOnly(rawA) ? 0.3 : 0.1; // "forty-six" is written "$46"
+  if (SOUNDS_ALIKE.some((g) => g.includes(a) && g.includes(b))) return 0.2;
+  if (a && b && (a.startsWith(b) || b.startsWith(a))) return 0.4;
+  if (a.length >= 3 && b.length >= 3 && a.slice(0, 3) === b.slice(0, 3)) return 0.6; // "want" heard as "wanna"
+  return 1;
 };
 
 // Speech stretches [start, end] in seconds, separated by pauses of at least `minGap`.
@@ -96,9 +107,8 @@ export function fromRecognised(tokens, rec) {
   const back = Array.from({length: n + 1}, () => new Uint8Array(m + 1));
   for (let i = 1; i <= n; i++) { D[i][0] = i; back[i][0] = 1; }
   for (let j = 1; j <= m; j++) { D[0][j] = j; back[0][j] = 2; }
-  const sub = (a, b) => (a === b ? 0 : a && b && (a.startsWith(b) || b.startsWith(a)) ? 0.4 : 1);
   for (let i = 1; i <= n; i++) for (let j = 1; j <= m; j++) {
-    const d = D[i - 1][j - 1] + sub(A[i - 1], B[j - 1]), u = D[i - 1][j] + 1, l = D[i][j - 1] + 1;
+    const d = D[i - 1][j - 1] + cost(A[i - 1], B[j - 1], tokens[i - 1].raw, rec[j - 1].word), u = D[i - 1][j] + 1, l = D[i][j - 1] + 1;
     if (d <= u && d <= l) { D[i][j] = d; back[i][j] = 0; } else if (u <= l) { D[i][j] = u; back[i][j] = 1; } else { D[i][j] = l; back[i][j] = 2; }
   }
   const match = new Array(n).fill(-1);
@@ -110,16 +120,32 @@ export function fromRecognised(tokens, rec) {
     else { mism.push({script: null, heard: rec[j - 1].word}); j--; }
   }
   const out = tokens.map((t, i) => (match[i] >= 0 ? {w: t.raw, s: rec[match[i]].start, e: rec[match[i]].end} : {w: t.raw, s: null, e: null}));
-  // Fill words the recogniser missed by sharing the time between their neighbours.
-  for (let i = 0; i < out.length; i++) {
+  // Words the recogniser missed. With room between their neighbours, they share that time. Without
+  // room, a neighbour swallowed them ("want a" heard as "wanna", "fifty dollars" written "$50"): the
+  // neighbour heard differently from the script is the one that did, and they share its time.
+  const inexact = (k) => k >= 0 && k < n && match[k] >= 0 && A[k] !== B[match[k]];
+  const share = (from, to, a, b) => {
+    const w = [];
+    for (let k = from; k < to; k++) w.push(weight(tokens[k]));
+    const total = w.reduce((x, y) => x + y, 0);
+    let acc = 0;
+    for (let k = from; k < to; k++) {
+      out[k].s = +(a + (acc / total) * (b - a)).toFixed(3);
+      acc += w[k - from];
+      out[k].e = +(a + (acc / total) * (b - a)).toFixed(3);
+    }
+  };
+  for (let i = 0; i < n; i++) {
     if (out[i].s !== null) continue;
-    let j = i; while (j < out.length && out[j].s === null) j++;
+    let j = i; while (j < n && out[j].s === null) j++;
     const a = i > 0 ? out[i - 1].e : (out[j]?.s ?? 0) - 0.3 * (j - i);
-    const b = j < out.length ? out[j].s : a + 0.3 * (j - i);
-    for (let k = i; k < j; k++) { out[k].s = +(a + ((k - i) / (j - i)) * (b - a)).toFixed(3); out[k].e = +(a + ((k - i + 1) / (j - i)) * (b - a)).toFixed(3); }
+    const b = j < n ? out[j].s : a + 0.3 * (j - i);
+    if (b - a >= 0.08 * (j - i)) share(i, j, a, b);
+    else if (i > 0 && (inexact(i - 1) || !inexact(j) || j === n)) share(i - 1, j, out[i - 1].s, b);
+    else share(i, j + 1, a, out[j].e);
     i = j - 1;
   }
   const wer = (D[n][m] / Math.max(1, n));
-  const real = mism.reverse().filter((x) => !(x.script && x.heard && sub(norm(x.script), norm(x.heard)) < 1)).filter((x) => !harmless(x.script, x.heard));
+  const real = mism.reverse().filter((x) => !(x.script && x.heard && cost(norm(x.script), norm(x.heard), '', '') <= 0.4)).filter((x) => !harmless(x.script, x.heard));
   return {words: out, wer, realWer: real.filter((x) => x.script).length / Math.max(1, n), mismatches: real};
 }

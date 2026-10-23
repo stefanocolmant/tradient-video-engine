@@ -63,6 +63,10 @@ show both to them, and adjust (`--update`, or edit `styles/acme/style.json` dire
 
 ## 3. Making a video (every step has a gate; never skip one)
 
+Worked examples to copy the level from: `videos/tap-buy` (house), `videos/cold-battery` (paper) and
+`videos/moon-distance` (mission). Read one example's `brief.md`, `facts.md`, `script.md` and
+`storyboard.json` before writing your first video.
+
 1. **Brief.** `npm run new -- <name> --style <style> --seconds <length>` then fill `brief.md` from what
    they told you. Ask at most one question, and only for something that changes the video (audience,
    length, call to action). Defaults: 35-50 seconds, 9:16, follow call to action, voice auto.
@@ -89,6 +93,10 @@ show both to them, and adjust (`--update`, or edit `styles/acme/style.json` dire
    a one-line caption suggestion. Offer to open it. Every new render is a new version; nothing is overwritten.
 
 When they ask for changes, change only what they named, re-run the affected gates, render a new version.
+
+**Long commands.** `render`, `make`, `stills`, `voice` and `style:learn` can take several minutes, longer
+than a normal command timeout. Run them as a background task from the start (Claude Code:
+`run_in_background`) and wait for the completion notice.
 
 ## 4. The quality bar (what "perfect" means here)
 

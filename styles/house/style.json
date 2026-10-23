@@ -28,7 +28,7 @@
   "emphasis": {"kind": "glow"},
   "icons": {"kind": "neon3d", "stroke": 1.8},
   "motion": {"energy": 0.62, "enter": "rise", "ease": "expo", "stagger": 0.07, "transition": "zoom", "transitionFrames": 10, "camera": 0.6, "idle": 0.6, "tilt": 0.6, "lead": 0.12, "avgShot": 2.8},
-  "finish": {"bloom": 0.8, "grain": 0.075, "vignette": 0.5, "chromatic": 0},
+  "finish": {"bloom": 0.8, "grain": 0.075, "vignette": 0.5},
   "captions": {"mode": "subtitle", "position": 0.75, "size": 52, "font": "caption", "case": "none", "maxWords": 6, "stroke": 0, "shadow": true},
   "layout": {"safeTop": 0.11, "safeBottom": 0.2, "safeSide": 0.075, "align": "center", "density": 1},
   "sound": {"music": "pulse", "musicVolume": 0.16, "sfx": 0.9},

@@ -66,8 +66,7 @@
   "finish": {
     "bloom": 0.35,
     "grain": 0.05,
-    "vignette": 0.45,
-    "chromatic": 0
+    "vignette": 0.45
   },
   "captions": {
     "mode": "subtitle",

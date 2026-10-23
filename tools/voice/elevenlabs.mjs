@@ -10,7 +10,7 @@ export async function speak(text, {voice = DEFAULT_VOICE, model = 'eleven_multil
   const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}/with-timestamps?output_format=mp3_44100_128`, {
     method: 'POST',
     headers: {'xi-api-key': key, 'Content-Type': 'application/json'},
-    body: JSON.stringify({text, model_id: model, voice_settings: {stability: 0.45, similarity_boost: 0.8, style: 0.15, use_speaker_boost: true, speed}}),
+    body: JSON.stringify({text, model_id: model ?? 'eleven_multilingual_v2', voice_settings: {stability: 0.45, similarity_boost: 0.8, style: 0.15, use_speaker_boost: true, ...(speed !== 1 ? {speed} : {})}}),
   });
   if (!res.ok) throw new Error(`ElevenLabs said ${res.status}: ${(await res.text()).slice(0, 300)}`);
   const j = await res.json();

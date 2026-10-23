@@ -8,7 +8,7 @@
   "check": {
     "by": "whisper.cpp (local)",
     "wer": 0,
-    "rawWer": 0.033,
+    "rawWer": 0.013,
     "mismatches": []
   },
   "made": "2026-10-23T02:54:46.421Z"
