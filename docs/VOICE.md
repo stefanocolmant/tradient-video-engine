@@ -10,8 +10,8 @@ timings, so re-recording the voice re-times the whole video automatically.
 |---|---|---|---|---|
 | `elevenlabs` | best, most human | your ElevenLabs plan | exact (from ElevenLabs) | `ELEVENLABS_API_KEY` in `.env`, `--voice <voice id>` |
 | `openai` | very good | your OpenAI usage | Whisper (same key) | `OPENAI_API_KEY` in `.env`, `--voice ash` (or alloy, coral, echo, sage...) |
-| `kokoro` | good, free, runs on your computer | free (Apache-2.0 model) | pauses + speech check | nothing; `--voice af_heart` (default), `am_michael`, `bm_george`... |
-| `say` | robotic, drafts only | free (macOS) | pauses + speech check | Mac only, `--voice Samantha` |
+| `kokoro` | good, free, runs on your computer | free (Apache-2.0 model) | estimated (exact with a recogniser) | nothing; `--voice af_heart` (default), `am_michael`, `bm_george`... |
+| `say` | robotic, drafts only | free (macOS) | estimated (exact with a recogniser) | Mac only, `--voice Samantha` |
 | `file` | your own recording | free | speech check | `--file my-take.wav`, read the script exactly as written |
 
 `--provider auto` (the default) picks ElevenLabs, then OpenAI, then Kokoro, then macOS say.
@@ -21,12 +21,17 @@ timings, so re-recording the voice re-times the whole video automatically.
 ElevenLabs default is "Brian" (`nPczCjzI2devNBz1zQrb`, a premade voice). Use any voice you have the
 rights to; check your plan's licence before posting commercially.
 
-## The check
+## The check and exact timing
 
 If a speech recogniser is available (local whisper.cpp after `npm run setup -- --whisper`, or an
 OpenAI key), the tool transcribes the new voice and compares it with the script, word by word. It
 reports the share of words not heard as written (numbers and sound-alikes like buy/by are ignored)
 and a "listen for" list. Fix those words with a pronunciation file and re-run.
+
+The recogniser also gives every word its real start and end. Without one, Kokoro and say timings
+are estimated from pauses and syllables: on a 30-second test, half the words landed within 0.17 s
+of the recognised timing, but the worst was 0.87 s off. Install whisper.cpp
+(macOS: `brew install whisper-cpp`, then `npm run setup -- --whisper`) for captions that hit every word.
 
 ## Pronunciation
 

@@ -23,6 +23,7 @@ export const StyleCard: React.FC<StyleCardProps> = ({style, refs, why = {}, labe
   const P = style.palette, F = style.fonts as any, M = style.motion as any, C = style.captions as any, FI = style.finish as any;
   const cols = refs.length <= 4 ? 2 : refs.length <= 9 ? 3 : 4;
   const cell = 900 / cols;
+  const area = why['palette.bg'] ? 740 : 790; // leave room for the sources line under the references
   const disp = F.display, body = F.body;
   return (
     <AbsoluteFill style={{background: '#101215', color: '#ECEEF2', fontFamily: 'Helvetica, Arial, sans-serif'}}>
@@ -35,7 +36,7 @@ export const StyleCard: React.FC<StyleCardProps> = ({style, refs, why = {}, labe
           <div style={{position: 'absolute', left: 30, top: 128, fontSize: 18, letterSpacing: 2, opacity: 0.6}}>{label.toUpperCase()}</div>
           <div style={{position: 'absolute', left: 30, top: 160, width: 900, display: 'grid', gridTemplateColumns: `repeat(${cols}, ${cell - 10}px)`, gap: 10}}>
             {refs.length ? refs.map((r, i) => (
-              <Img key={i} src={staticFile(r)} style={{width: cell - 10, height: Math.min(label.startsWith('Sample') ? (cell - 10) * 1.6 : cell - 10, (790 / Math.ceil(refs.length / cols)) - 10), objectFit: 'cover', objectPosition: 'center 30%', borderRadius: 8}} />
+              <Img key={i} src={staticFile(r)} style={{width: cell - 10, height: Math.min(label.startsWith('Sample') ? (cell - 10) * 1.6 : cell - 10, (area / Math.ceil(refs.length / cols)) - 10), objectFit: 'cover', objectPosition: 'center 30%', borderRadius: 8}} />
             )) : <div style={{fontSize: 26, opacity: 0.6}}>No reference images (defined style)</div>}
           </div>
           <div style={{position: 'absolute', left: 960, top: 130, width: 300}}>
@@ -58,16 +59,17 @@ export const StyleCard: React.FC<StyleCardProps> = ({style, refs, why = {}, labe
           <div style={{position: 'absolute', left: 960, top: 680, width: 610}}>
             <div style={{fontSize: 18, letterSpacing: 2, opacity: 0.6, marginBottom: 8}}>TYPE</div>
             <div style={{fontFamily: `"${disp.family}"`, fontWeight: disp.weight, fontSize: 54, lineHeight: 1.05, letterSpacing: `${disp.tracking ?? 0}em`, textTransform: disp.case === 'upper' ? 'uppercase' : 'none'}}>{disp.family} Aa 123</div>
-            <div style={{fontFamily: `"${body.family}"`, fontWeight: body.weight, fontSize: 26, marginTop: 6, opacity: 0.9}}>{body.family}: the quick brown fox jumps over the lazy dog</div>
+            <div style={{fontFamily: `"${body.family}"`, fontWeight: body.weight, fontSize: 24, marginTop: 6, opacity: 0.9, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{body.family}: the quick brown fox jumps over the lazy dog</div>
             <div style={{fontSize: 18, letterSpacing: 2, opacity: 0.6, margin: '22px 0 8px'}}>RHYTHM AND FINISH</div>
             <div style={{fontSize: 21, lineHeight: 1.5}}>
               energy {M.energy} · {M.enter} entrances · {M.transition} cuts · {M.avgShot}s per shot<br />
               captions: {C.mode}, up to {C.maxWords} words · background: {style.background.kind}<br />
-              surface: {style.surface.kind}, radius {style.surface.radius} · bloom {FI.bloom} · grain {FI.grain} · vignette {FI.vignette}
+              surface: {style.surface.kind}, radius {style.surface.radius}<br />
+              bloom {FI.bloom} · grain {FI.grain} · vignette {FI.vignette}
             </div>
           </div>
           {why['palette.bg'] && (
-            <div style={{position: 'absolute', left: 30, bottom: 18, right: 30, fontSize: 16, opacity: 0.55, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>
+            <div style={{position: 'absolute', left: 30, bottom: 18, width: 900, fontSize: 16, lineHeight: 1.35, opacity: 0.55, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden'}}>
               bg: {why['palette.bg']} · accent: {why['palette.accent']} · titles: {why['fonts.display']} · motion: {why.motion}
             </div>
           )}

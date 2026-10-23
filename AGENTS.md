@@ -11,6 +11,9 @@ Read this file fully at the start of every session. The details live in `docs/` 
 1. Check setup: run `npm run doctor`. If `node_modules` is missing or the doctor says NOT READY, run
    `npm run setup` (installs packages, the render browser and the free voice; 2 to 5 minutes the first
    time). If Node is missing, tell them to install Node 20+ from https://nodejs.org and stop there.
+   If the doctor shows no speech recogniser, add one now: it's free and makes every word's timing
+   exact (without it, timings are estimated and can be half a second off). On a Mac with Homebrew:
+   `brew install whisper-cpp`, then `npm run setup -- --whisper`. Without Homebrew, say so and carry on.
 2. Then answer with this menu, filled in, in plain words (no extra preamble):
 
    > **You're set up.** Pick a style for your videos:

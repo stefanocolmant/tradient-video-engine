@@ -36,7 +36,7 @@ Prefer to look first? `npm run gallery` opens START-HERE.html with the three exa
 |---|---|---|
 | ElevenLabs voice | the most human narration, exact timings | put `ELEVENLABS_API_KEY=...` in `.env` |
 | OpenAI voice | very good narration + Whisper checks | put `OPENAI_API_KEY=...` in `.env` |
-| whisper.cpp | free word-by-word check of every voice | macOS: `brew install whisper-cpp`, then `npm run setup -- --whisper` |
+| whisper.cpp | exact word timing for captions and cues, plus a word-by-word check of every voice | macOS: `brew install whisper-cpp`, then `npm run setup -- --whisper` |
 | yt-dlp | train styles from video links | macOS: `brew install yt-dlp` · Windows: `winget install yt-dlp` |
 | FFmpeg | faster media tools (optional; one is bundled) | macOS: `brew install ffmpeg` |
 

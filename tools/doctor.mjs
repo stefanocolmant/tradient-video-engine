@@ -34,7 +34,7 @@ export async function doctor({quiet = false} = {}) {
   const whisperBin = ['whisper-cli', 'whisper-cpp'].find((b) => spawnSync(b, ['--help'], {stdio: 'ignore'}).status === 0);
   const whisperModel = exists(path.join(ROOT, '.cache', 'whisper', 'ggml-base.en.bin'));
   const recog = (whisperBin && whisperModel) || hasKey('OPENAI_API_KEY');
-  add(recog, 'Voice check (speech recogniser)', whisperBin && whisperModel ? 'whisper.cpp ready' : hasKey('OPENAI_API_KEY') ? 'OpenAI Whisper (key)' : 'none (optional: checks the voice said every word)', whisperBin ? 'Run: npm run setup -- --whisper' : 'Install whisper.cpp (macOS: brew install whisper-cpp), then npm run setup -- --whisper');
+  add(recog, 'Voice check (speech recogniser)', whisperBin && whisperModel ? 'whisper.cpp ready' : hasKey('OPENAI_API_KEY') ? 'OpenAI Whisper (key)' : 'none (recommended: exact word timing, and checks the voice said every word)', whisperBin ? 'Run: npm run setup -- --whisper' : 'Install whisper.cpp (macOS: brew install whisper-cpp), then npm run setup -- --whisper');
   // Styles and disk
   const styles = exists(STYLES) ? fs.readdirSync(STYLES).filter((d) => exists(path.join(STYLES, d, 'style.json'))) : [];
   add(styles.length > 0, 'Styles', styles.join(', ') || 'none');

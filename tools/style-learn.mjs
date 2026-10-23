@@ -57,7 +57,9 @@ function fetchVideoUrl(url, dir) {
   fs.mkdirSync(dir, {recursive: true});
   const r = spawnSync('yt-dlp', ['-f', 'mp4[height<=1080]/best[height<=1080]/best', '--max-filesize', '300M', '--no-playlist', '-o', path.join(dir, '%(id)s.%(ext)s'), '--print', 'after_move:filepath', url], {encoding: 'utf8'});
   const file = r.stdout.trim().split('\n').pop();
-  return r.status === 0 && file && exists(file) ? {file} : {error: (r.stderr || '').split('\n').slice(-2).join(' ')};
+  if (r.status === 0 && file && exists(file)) return {file};
+  // Sites change often; an old yt-dlp is the usual cause (YouTube answers "403 Forbidden").
+  return {error: `${(r.stderr || '').trim().split('\n').slice(-2).join(' ')} (update yt-dlp with "yt-dlp -U", "pip install -U yt-dlp" or "brew upgrade yt-dlp", or download the video and drop the file in the inbox)`};
 }
 
 function heicToJpg(file) {

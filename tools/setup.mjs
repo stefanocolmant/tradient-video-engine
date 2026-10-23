@@ -32,9 +32,10 @@ if (!a['no-voice']) {
   }
 }
 
-if (a.whisper) {
-  step('Speech recogniser for voice checks (whisper.cpp base.en model, ~150 MB)');
-  const bin = ['whisper-cli', 'whisper-cpp'].find((b) => spawnSync(b, ['--help'], {stdio: 'ignore'}).status === 0);
+// Exact word timing and voice checks: fetched whenever whisper.cpp is installed (or asked for).
+const bin = ['whisper-cli', 'whisper-cpp'].find((b) => spawnSync(b, ['--help'], {stdio: 'ignore'}).status === 0);
+if (a.whisper || bin) {
+  step('Speech recogniser for exact word timing and voice checks (whisper.cpp base.en model, ~150 MB)');
   if (!bin) console.log('  whisper.cpp is not installed. macOS: brew install whisper-cpp · Windows/Linux: https://github.com/ggml-org/whisper.cpp\n  Then run: npm run setup -- --whisper');
   else {
     const file = path.join(ROOT, '.cache', 'whisper', 'ggml-base.en.bin');
