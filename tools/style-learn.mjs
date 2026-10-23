@@ -59,7 +59,8 @@ function fetchVideoUrl(url, dir) {
   const file = r.stdout.trim().split('\n').pop();
   if (r.status === 0 && file && exists(file)) return {file};
   // Sites change often; an old yt-dlp is the usual cause (YouTube answers "403 Forbidden").
-  return {error: `${(r.stderr || '').trim().split('\n').slice(-2).join(' ')} (update yt-dlp with "yt-dlp -U", "pip install -U yt-dlp" or "brew upgrade yt-dlp", or download the video and drop the file in the inbox)`};
+  const lines = (r.stderr || '').trim().split('\n');
+  return {error: `${lines.filter((l) => l.startsWith('ERROR')).pop() ?? lines.slice(-2).join(' ')} (update yt-dlp with "yt-dlp -U", "pip install -U yt-dlp" or "brew upgrade yt-dlp", or download the video and drop the file in the inbox)`};
 }
 
 function heicToJpg(file) {
